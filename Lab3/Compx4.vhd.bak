@@ -1,0 +1,41 @@
+-- Anish Aggarwal && Jaswin Hargun (Group 24) --
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+library work;
+
+entity Compx4 is port (
+			A3,B3, A2,B2, A1,B1, A0,B0 					: in std_logic;
+			AGTB, AEQB, ALTB	: out std_logic  -- Outputs are whether A is greater than, equal, less than B respectively
+			);
+end Compx4;
+
+
+architecture Circuit of Compx4 is
+
+-- Declare any Components to be Used ---
+------------------------------------------------------------------- 
+-------------------------------------------------------------------
+
+-- Declare any signals to be used within the design---
+-------------------------------------------------------------------
+
+signal AgtB, AeqB : std_logic;  -- These outputs are used to find ALTB, so they are included as signals
+
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+
+begin
+
+-- First, signals are found for use in finding ALTB
+AgtB <= A AND (NOT B);
+AeqB <= A XNOR B;
+
+-- Outputs
+AGTB <= AgtB;
+AEQB <= AeqB;
+ALTB <= AgtB NOR AeqB;
+
+end;

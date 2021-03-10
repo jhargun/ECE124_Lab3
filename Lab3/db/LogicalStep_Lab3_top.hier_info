@@ -1,0 +1,90 @@
+|LogicalStep_Lab3_top
+clk_in => ~NO_FANOUT~
+pb[0] => ~NO_FANOUT~
+pb[1] => ~NO_FANOUT~
+pb[2] => ~NO_FANOUT~
+pb[3] => ~NO_FANOUT~
+sw[0] => Compx4:comparator.hex_val_A[0]
+sw[1] => Compx4:comparator.hex_val_A[1]
+sw[2] => Compx4:comparator.hex_val_A[2]
+sw[3] => Compx4:comparator.hex_val_A[3]
+sw[4] => Compx4:comparator.hex_val_B[0]
+sw[5] => Compx4:comparator.hex_val_B[1]
+sw[6] => Compx4:comparator.hex_val_B[2]
+sw[7] => Compx4:comparator.hex_val_B[3]
+leds[0] <= Compx4:comparator.ALTB
+leds[1] <= Compx4:comparator.AEQB
+leds[2] <= Compx4:comparator.AGTB
+leds[3] <= <GND>
+leds[4] <= <GND>
+leds[5] <= <GND>
+leds[6] <= <GND>
+leds[7] <= <GND>
+leds[8] <= <GND>
+leds[9] <= <GND>
+leds[10] <= <GND>
+leds[11] <= <GND>
+
+
+|LogicalStep_Lab3_top|Compx4:comparator
+hex_val_A[0] => Compx1:comp0.A
+hex_val_A[1] => Compx1:comp1.A
+hex_val_A[2] => Compx1:comp2.A
+hex_val_A[3] => Compx1:comp3.A
+hex_val_B[0] => Compx1:comp0.B
+hex_val_B[1] => Compx1:comp1.B
+hex_val_B[2] => Compx1:comp2.B
+hex_val_B[3] => Compx1:comp3.B
+AGTB <= AGTB.DB_MAX_OUTPUT_PORT_TYPE
+AEQB <= AEQB.DB_MAX_OUTPUT_PORT_TYPE
+ALTB <= ALTB.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab3_top|Compx4:comparator|Compx1:comp0
+A => AGTB.IN0
+A => AEQB.IN0
+A => ALTB.IN0
+B => AEQB.IN1
+B => ALTB.IN1
+B => AGTB.IN1
+AGTB <= AGTB.DB_MAX_OUTPUT_PORT_TYPE
+AEQB <= AEQB.DB_MAX_OUTPUT_PORT_TYPE
+ALTB <= ALTB.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab3_top|Compx4:comparator|Compx1:comp1
+A => AGTB.IN0
+A => AEQB.IN0
+A => ALTB.IN0
+B => AEQB.IN1
+B => ALTB.IN1
+B => AGTB.IN1
+AGTB <= AGTB.DB_MAX_OUTPUT_PORT_TYPE
+AEQB <= AEQB.DB_MAX_OUTPUT_PORT_TYPE
+ALTB <= ALTB.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab3_top|Compx4:comparator|Compx1:comp2
+A => AGTB.IN0
+A => AEQB.IN0
+A => ALTB.IN0
+B => AEQB.IN1
+B => ALTB.IN1
+B => AGTB.IN1
+AGTB <= AGTB.DB_MAX_OUTPUT_PORT_TYPE
+AEQB <= AEQB.DB_MAX_OUTPUT_PORT_TYPE
+ALTB <= ALTB.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab3_top|Compx4:comparator|Compx1:comp3
+A => AGTB.IN0
+A => AEQB.IN0
+A => ALTB.IN0
+B => AEQB.IN1
+B => ALTB.IN1
+B => AGTB.IN1
+AGTB <= AGTB.DB_MAX_OUTPUT_PORT_TYPE
+AEQB <= AEQB.DB_MAX_OUTPUT_PORT_TYPE
+ALTB <= ALTB.DB_MAX_OUTPUT_PORT_TYPE
+
+
