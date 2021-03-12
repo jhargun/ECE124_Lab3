@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "03/11/2021 22:48:33"
+-- Generated on "03/12/2021 16:46:38"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          LogicalStep_Lab3_top
 -- 
@@ -41,7 +41,7 @@ SIGNAL sw : STD_LOGIC_VECTOR(7 DOWNTO 0);
 COMPONENT LogicalStep_Lab3_top
 	PORT (
 	clk_in : IN STD_LOGIC;
-	leds : BUFFER STD_LOGIC_VECTOR(11 DOWNTO 0);
+	leds : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
 	pb : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 	sw : IN STD_LOGIC_VECTOR(7 DOWNTO 0)
 	);
@@ -61,9 +61,9 @@ t_prcs_clk_in: PROCESS
 BEGIN
 LOOP
 	clk_in <= '0';
-	WAIT FOR 10000 ps;
+	WAIT FOR 25000 ps;
 	clk_in <= '1';
-	WAIT FOR 10000 ps;
+	WAIT FOR 25000 ps;
 	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
 END LOOP;
 END PROCESS t_prcs_clk_in;
@@ -126,19 +126,19 @@ END PROCESS t_prcs_sw_4;
 -- pb[3]
 t_prcs_pb_3: PROCESS
 BEGIN
-LOOP
-	pb(3) <= '0';
-	WAIT FOR 500000 ps;
 	pb(3) <= '1';
-	WAIT FOR 500000 ps;
-	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
-END LOOP;
+WAIT;
 END PROCESS t_prcs_pb_3;
 -- pb[2]
 t_prcs_pb_2: PROCESS
 BEGIN
+LOOP
 	pb(2) <= '0';
-WAIT;
+	WAIT FOR 250000 ps;
+	pb(2) <= '1';
+	WAIT FOR 250000 ps;
+	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
+END LOOP;
 END PROCESS t_prcs_pb_2;
 -- pb[1]
 t_prcs_pb_1: PROCESS

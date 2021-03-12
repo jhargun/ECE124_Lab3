@@ -67,6 +67,7 @@ component energy_ctrl_logic -- Energy Monitor & Control Logic Block
 	signal increase, decrease, run_n : std_logic;
 	signal current_temp : std_logic_vector(3 downto 0);
 	signal LT, EQ_TO, GT : std_logic;
+	signal mag_test_pass : std_logic;
 
 ------------------------------------------------------------------- 
 	
@@ -109,9 +110,10 @@ begin
 															 leds(0), leds(1), leds(2), leds(3), leds(7), leds(5), leds(4));
 	
 	-- Using Tester to test the Comparator Component made in Part A of the Lab.
-	Tester1: Tester port map(mc_testmode, EQ_TO, GT, LT, desired_temp, current_temp, leds(6));
+	Tester1: Tester port map(mc_testmode, EQ_TO, GT, LT, current_temp, desired_temp, mag_test_pass);
 
 	-- Setting the Current_Temperature after all adjustments and writing that signal to the corresponding output LEDS.
+	leds(6) <= mag_test_pass OR (NOT mc_testmode);
 	leds(11 downto 8) <= current_temp; 
 	
 end design;

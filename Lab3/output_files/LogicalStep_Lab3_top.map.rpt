@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LogicalStep_Lab3_top
-Fri Mar 12 12:34:26 2021
+Fri Mar 12 16:43:27 2021
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -44,7 +44,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Mar 12 12:34:26 2021       ;
+; Analysis & Synthesis Status        ; Successful - Fri Mar 12 16:43:27 2021       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; LogicalStep_Lab3_top                        ;
 ; Top-level Entity Name              ; LogicalStep_Lab3_top                        ;
@@ -218,11 +218,10 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                    ; Entity Name          ; Library Name ;
 +---------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------+----------------------+--------------+
-; |LogicalStep_Lab3_top                 ; 36 (0)              ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 25   ; 0            ; 0          ; |LogicalStep_Lab3_top                                  ; LogicalStep_Lab3_top ; work         ;
+; |LogicalStep_Lab3_top                 ; 36 (10)             ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 25   ; 0            ; 0          ; |LogicalStep_Lab3_top                                  ; LogicalStep_Lab3_top ; work         ;
 ;    |Compx4:Comparator|                ; 9 (8)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LogicalStep_Lab3_top|Compx4:Comparator                ; Compx4               ; work         ;
 ;       |Compx1:comp0|                  ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LogicalStep_Lab3_top|Compx4:Comparator|Compx1:comp0   ; Compx1               ; work         ;
 ;    |HVAC:HVAC_Sim|                    ; 11 (11)             ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LogicalStep_Lab3_top|HVAC:HVAC_Sim                    ; HVAC                 ; work         ;
-;    |Tester:Tester1|                   ; 10 (10)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LogicalStep_Lab3_top|Tester:Tester1                   ; Tester               ; work         ;
 ;    |energy_ctrl_logic:Control_Energy| ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LogicalStep_Lab3_top|energy_ctrl_logic:Control_Energy ; energy_ctrl_logic    ; work         ;
 ;    |temp_mux:Target_Temp|             ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |LogicalStep_Lab3_top|temp_mux:Target_Temp             ; temp_mux             ; work         ;
 +---------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------+----------------------+--------------+
@@ -292,7 +291,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Fri Mar 12 12:34:17 2021
+    Info: Processing started: Fri Mar 12 16:43:18 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -316,16 +315,16 @@ Info (12127): Elaborating entity "LogicalStep_Lab3_top" for the top level hierar
 Warning (12125): Using design file temp_mux.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: temp_mux-mux_logic File: C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/temp_mux.vhd Line: 19
     Info (12023): Found entity 1: temp_mux File: C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/temp_mux.vhd Line: 6
-Info (12128): Elaborating entity "temp_mux" for hierarchy "temp_mux:Target_Temp" File: C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/LogicalStep_Lab3_top.vhd Line: 97
-Info (12128): Elaborating entity "HVAC" for hierarchy "HVAC:HVAC_Sim" File: C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/LogicalStep_Lab3_top.vhd Line: 100
+Info (12128): Elaborating entity "temp_mux" for hierarchy "temp_mux:Target_Temp" File: C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/LogicalStep_Lab3_top.vhd Line: 98
+Info (12128): Elaborating entity "HVAC" for hierarchy "HVAC:HVAC_Sim" File: C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/LogicalStep_Lab3_top.vhd Line: 101
 Warning (10492): VHDL Process Statement warning at HVAC.vhd(28): signal "run_n" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/HVAC.vhd Line: 28
-Info (12128): Elaborating entity "Compx4" for hierarchy "Compx4:Comparator" File: C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/LogicalStep_Lab3_top.vhd Line: 104
+Info (12128): Elaborating entity "Compx4" for hierarchy "Compx4:Comparator" File: C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/LogicalStep_Lab3_top.vhd Line: 105
 Warning (12125): Using design file compx1.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: Compx1-Circuit File: C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/compx1.vhd Line: 16
     Info (12023): Found entity 1: Compx1 File: C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/compx1.vhd Line: 9
 Info (12128): Elaborating entity "Compx1" for hierarchy "Compx4:Comparator|Compx1:comp0" File: C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/Compx4.vhd Line: 40
-Info (12128): Elaborating entity "energy_ctrl_logic" for hierarchy "energy_ctrl_logic:Control_Energy" File: C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/LogicalStep_Lab3_top.vhd Line: 107
-Info (12128): Elaborating entity "Tester" for hierarchy "Tester:Tester1" File: C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/LogicalStep_Lab3_top.vhd Line: 112
+Info (12128): Elaborating entity "energy_ctrl_logic" for hierarchy "energy_ctrl_logic:Control_Energy" File: C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/LogicalStep_Lab3_top.vhd Line: 108
+Info (12128): Elaborating entity "Tester" for hierarchy "Tester:Tester1" File: C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/LogicalStep_Lab3_top.vhd Line: 113
 Warning (10492): VHDL Process Statement warning at Tester.vhd(48): signal "MC_TESTMODE" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/Tester.vhd Line: 48
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -335,8 +334,8 @@ Info (21057): Implemented 61 device resources after synthesis - the final resour
     Info (21059): Implemented 12 output pins
     Info (21061): Implemented 36 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4803 megabytes
-    Info: Processing ended: Fri Mar 12 12:34:26 2021
+    Info: Peak virtual memory: 4801 megabytes
+    Info: Processing ended: Fri Mar 12 16:43:27 2021
     Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:22
 
