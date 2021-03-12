@@ -1,0 +1,37 @@
+-- Anish Aggarwal && Jaswin Hargun (Group 24) --
+library ieee;
+use ieee.std_logic_1164.all;
+library work;
+
+entity energy_ctrl_logic is -- Energy Monitor & Control Logic Block
+ 	port (
+			LESSER, GREATER, EQUAL_TO						 : in std_logic_vector(3 downto 0); -- Comparison of Current_Temp to Mux Temp
+			VACA_MODE, MC_TEST, WIND_OPEN, DOOR_OPEN	 : in std_logic; -- HVAC Simulation Mode
+			INCREASE, DECREASE, RUN_N						 : out std_logic; -- Variable Controllers for HVAC Simulation
+			FURN, AT_TEMP, A/C, BLOWER, VAC_LED			 : out std_logic; -- Appliance Outputs
+			DOOR_LED, WIND_LED								 : out std_logic; -- Appliance Outputs
+			);
+
+ end energy_ctrl_logic;
+
+ 
+----------------------------------------------------------------------------
+-----------------------------Logic Architecture-----------------------------
+----------------------------------------------------------------------------
+architecture control_logic of energy_ctrl_logic is
+ 
+ begin
+ RUN_N <= (WIND_OPEN OR DOOR_OPEN OR MC_TEST OR EQ_TO);
+ A/C <= GREATER;
+ FURN <= LESSER;
+ AT_TEMP <= EQUAL_TO;
+ BLOWER <= (NOT EQUAL_TO) AND (NOT (MC_TEST OR WIND_OPEN  OR DOOR_OPEN));
+ DOOR_LED <= DOOR_OPEN;
+ WIND_LED <= WIND_OPEN;
+ VAC_LED <= VACA_MODE;
+ INCREASE <= LESSER;
+ DECREASE <= GREATER;
+ 
+ end control_logic;
+ 
+ 

@@ -1,32 +1,74 @@
 |LogicalStep_Lab3_top
-clk_in => ~NO_FANOUT~
-pb[0] => ~NO_FANOUT~
-pb[1] => ~NO_FANOUT~
-pb[2] => ~NO_FANOUT~
-pb[3] => ~NO_FANOUT~
-sw[0] => Compx4:comparator.hex_val_A[0]
-sw[1] => Compx4:comparator.hex_val_A[1]
-sw[2] => Compx4:comparator.hex_val_A[2]
-sw[3] => Compx4:comparator.hex_val_A[3]
-sw[4] => Compx4:comparator.hex_val_B[0]
-sw[5] => Compx4:comparator.hex_val_B[1]
-sw[6] => Compx4:comparator.hex_val_B[2]
-sw[7] => Compx4:comparator.hex_val_B[3]
-leds[0] <= Compx4:comparator.ALTB
-leds[1] <= Compx4:comparator.AEQB
-leds[2] <= Compx4:comparator.AGTB
-leds[3] <= <GND>
-leds[4] <= <GND>
-leds[5] <= <GND>
-leds[6] <= <GND>
-leds[7] <= <GND>
-leds[8] <= <GND>
-leds[9] <= <GND>
-leds[10] <= <GND>
-leds[11] <= <GND>
+clk_in => HVAC:HVAC_Sim.clk
+pb[0] => energy_ctrl_logic:Control_Energy.DOOR_OPEN
+pb[1] => energy_ctrl_logic:Control_Energy.WIND_OPEN
+pb[2] => energy_ctrl_logic:Control_Energy.MC_TEST
+pb[2] => Tester:Tester1.MC_TESTMODE
+pb[3] => temp_mux:Target_Temp.mux_select
+pb[3] => energy_ctrl_logic:Control_Energy.VACA_MODE
+sw[0] => temp_mux:Target_Temp.desired_temp[0]
+sw[0] => Tester:Tester1.input1[0]
+sw[1] => temp_mux:Target_Temp.desired_temp[1]
+sw[1] => Tester:Tester1.input1[1]
+sw[2] => temp_mux:Target_Temp.desired_temp[2]
+sw[2] => Tester:Tester1.input1[2]
+sw[3] => temp_mux:Target_Temp.desired_temp[3]
+sw[3] => Tester:Tester1.input1[3]
+sw[4] => temp_mux:Target_Temp.vac_temp[0]
+sw[5] => temp_mux:Target_Temp.vac_temp[1]
+sw[6] => temp_mux:Target_Temp.vac_temp[2]
+sw[7] => temp_mux:Target_Temp.vac_temp[3]
+leds[0] << energy_ctrl_logic:Control_Energy.FURN
+leds[1] << energy_ctrl_logic:Control_Energy.AT_TEMP
+leds[2] << energy_ctrl_logic:Control_Energy.A_C
+leds[3] << energy_ctrl_logic:Control_Energy.BLOWER
+leds[4] << energy_ctrl_logic:Control_Energy.WIND_LED
+leds[5] << energy_ctrl_logic:Control_Energy.DOOR_LED
+leds[6] << Tester:Tester1.TEST_PASS
+leds[7] << energy_ctrl_logic:Control_Energy.VAC_LED
+leds[8] << HVAC:HVAC_Sim.temp[0]
+leds[9] << HVAC:HVAC_Sim.temp[1]
+leds[10] << HVAC:HVAC_Sim.temp[2]
+leds[11] << HVAC:HVAC_Sim.temp[3]
 
 
-|LogicalStep_Lab3_top|Compx4:comparator
+|LogicalStep_Lab3_top|temp_mux:Target_Temp
+desired_temp[0] => temp_out.DATAA
+desired_temp[1] => temp_out.DATAA
+desired_temp[2] => temp_out.DATAA
+desired_temp[3] => temp_out.DATAA
+vac_temp[0] => temp_out.DATAB
+vac_temp[1] => temp_out.DATAB
+vac_temp[2] => temp_out.DATAB
+vac_temp[3] => temp_out.DATAB
+mux_select => temp_out.OUTPUTSELECT
+mux_select => temp_out.OUTPUTSELECT
+mux_select => temp_out.OUTPUTSELECT
+mux_select => temp_out.OUTPUTSELECT
+temp_out[0] <= temp_out.DB_MAX_OUTPUT_PORT_TYPE
+temp_out[1] <= temp_out.DB_MAX_OUTPUT_PORT_TYPE
+temp_out[2] <= temp_out.DB_MAX_OUTPUT_PORT_TYPE
+temp_out[3] <= temp_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab3_top|HVAC:HVAC_Sim
+clk => \counter:cnt[0].CLK
+clk => \counter:cnt[1].CLK
+clk => \counter:cnt[2].CLK
+clk => \counter:cnt[3].CLK
+run_n => \counter:cnt[0].ENA
+run_n => \counter:cnt[1].ENA
+run_n => \counter:cnt[2].ENA
+run_n => \counter:cnt[3].ENA
+increase => counter.IN1
+decrease => counter.IN1
+temp[0] <= \counter:cnt[0].DB_MAX_OUTPUT_PORT_TYPE
+temp[1] <= \counter:cnt[1].DB_MAX_OUTPUT_PORT_TYPE
+temp[2] <= \counter:cnt[2].DB_MAX_OUTPUT_PORT_TYPE
+temp[3] <= \counter:cnt[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab3_top|Compx4:Comparator
 hex_val_A[0] => Compx1:comp0.A
 hex_val_A[1] => Compx1:comp1.A
 hex_val_A[2] => Compx1:comp2.A
@@ -40,7 +82,7 @@ AEQB <= AEQB.DB_MAX_OUTPUT_PORT_TYPE
 ALTB <= ALTB.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LogicalStep_Lab3_top|Compx4:comparator|Compx1:comp0
+|LogicalStep_Lab3_top|Compx4:Comparator|Compx1:comp0
 A => AGTB.IN0
 A => AEQB.IN0
 A => ALTB.IN0
@@ -52,7 +94,7 @@ AEQB <= AEQB.DB_MAX_OUTPUT_PORT_TYPE
 ALTB <= ALTB.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LogicalStep_Lab3_top|Compx4:comparator|Compx1:comp1
+|LogicalStep_Lab3_top|Compx4:Comparator|Compx1:comp1
 A => AGTB.IN0
 A => AEQB.IN0
 A => ALTB.IN0
@@ -64,7 +106,7 @@ AEQB <= AEQB.DB_MAX_OUTPUT_PORT_TYPE
 ALTB <= ALTB.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LogicalStep_Lab3_top|Compx4:comparator|Compx1:comp2
+|LogicalStep_Lab3_top|Compx4:Comparator|Compx1:comp2
 A => AGTB.IN0
 A => AEQB.IN0
 A => ALTB.IN0
@@ -76,7 +118,7 @@ AEQB <= AEQB.DB_MAX_OUTPUT_PORT_TYPE
 ALTB <= ALTB.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|LogicalStep_Lab3_top|Compx4:comparator|Compx1:comp3
+|LogicalStep_Lab3_top|Compx4:Comparator|Compx1:comp3
 A => AGTB.IN0
 A => AEQB.IN0
 A => ALTB.IN0
@@ -86,5 +128,66 @@ B => AGTB.IN1
 AGTB <= AGTB.DB_MAX_OUTPUT_PORT_TYPE
 AEQB <= AEQB.DB_MAX_OUTPUT_PORT_TYPE
 ALTB <= ALTB.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab3_top|energy_ctrl_logic:Control_Energy
+GREATER => DECREASE.DATAIN
+GREATER => A_C.DATAIN
+EQUAL_TO => RUN_N.IN1
+EQUAL_TO => AT_TEMP.DATAIN
+EQUAL_TO => BLOWER.IN1
+LESSER => INCREASE.DATAIN
+LESSER => FURN.DATAIN
+VACA_MODE => VAC_LED.DATAIN
+MC_TEST => RUN_N.IN1
+MC_TEST => BLOWER.IN0
+WIND_OPEN => RUN_N.IN0
+WIND_OPEN => BLOWER.IN1
+WIND_OPEN => WIND_LED.DATAIN
+DOOR_OPEN => RUN_N.IN1
+DOOR_OPEN => BLOWER.IN1
+DOOR_OPEN => DOOR_LED.DATAIN
+INCREASE <= LESSER.DB_MAX_OUTPUT_PORT_TYPE
+DECREASE <= GREATER.DB_MAX_OUTPUT_PORT_TYPE
+RUN_N <= RUN_N.DB_MAX_OUTPUT_PORT_TYPE
+FURN <= LESSER.DB_MAX_OUTPUT_PORT_TYPE
+AT_TEMP <= EQUAL_TO.DB_MAX_OUTPUT_PORT_TYPE
+A_C <= GREATER.DB_MAX_OUTPUT_PORT_TYPE
+BLOWER <= BLOWER.DB_MAX_OUTPUT_PORT_TYPE
+VAC_LED <= VACA_MODE.DB_MAX_OUTPUT_PORT_TYPE
+DOOR_LED <= DOOR_OPEN.DB_MAX_OUTPUT_PORT_TYPE
+WIND_LED <= WIND_OPEN.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LogicalStep_Lab3_top|Tester:Tester1
+MC_TESTMODE => TEST_PASS.IN1
+I1EQI2 => \Tester1:EQ_PASS.IN1
+I1GTI2 => Tester1.IN1
+I1LTI2 => Tester1.IN1
+input1[0] => Equal0.IN3
+input1[0] => LessThan0.IN4
+input1[0] => LessThan1.IN4
+input1[1] => Equal0.IN2
+input1[1] => LessThan0.IN3
+input1[1] => LessThan1.IN3
+input1[2] => Equal0.IN1
+input1[2] => LessThan0.IN2
+input1[2] => LessThan1.IN2
+input1[3] => Equal0.IN0
+input1[3] => LessThan0.IN1
+input1[3] => LessThan1.IN1
+input2[0] => Equal0.IN7
+input2[0] => LessThan0.IN8
+input2[0] => LessThan1.IN8
+input2[1] => Equal0.IN6
+input2[1] => LessThan0.IN7
+input2[1] => LessThan1.IN7
+input2[2] => Equal0.IN5
+input2[2] => LessThan0.IN6
+input2[2] => LessThan1.IN6
+input2[3] => Equal0.IN4
+input2[3] => LessThan0.IN5
+input2[3] => LessThan1.IN5
+TEST_PASS <= TEST_PASS.DB_MAX_OUTPUT_PORT_TYPE
 
 

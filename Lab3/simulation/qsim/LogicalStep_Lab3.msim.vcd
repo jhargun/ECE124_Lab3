@@ -3,7 +3,7 @@ $comment
 		vcd file LogicalStep_Lab3.msim.vcd -direction
 $end
 $date
-	Wed Mar 10 00:35:20 2021
+	Fri Mar 12 12:47:31 2021
 $end
 $version
 	ModelSim Version 10.5b
@@ -12,145 +12,188 @@ $timescale
 	1ps
 $end
 
-$scope module logicalstep_lab3_top_vhd_vec_tst $end
-$var wire 1 ! clk_in $end
-$var wire 1 " leds [11] $end
-$var wire 1 # leds [10] $end
-$var wire 1 $ leds [9] $end
-$var wire 1 % leds [8] $end
-$var wire 1 & leds [7] $end
-$var wire 1 ' leds [6] $end
-$var wire 1 ( leds [5] $end
-$var wire 1 ) leds [4] $end
-$var wire 1 * leds [3] $end
-$var wire 1 + leds [2] $end
-$var wire 1 , leds [1] $end
-$var wire 1 - leds [0] $end
-$var wire 1 . pb [3] $end
-$var wire 1 / pb [2] $end
-$var wire 1 0 pb [1] $end
-$var wire 1 1 pb [0] $end
-$var wire 1 2 sw [7] $end
-$var wire 1 3 sw [6] $end
-$var wire 1 4 sw [5] $end
-$var wire 1 5 sw [4] $end
-$var wire 1 6 sw [3] $end
-$var wire 1 7 sw [2] $end
-$var wire 1 8 sw [1] $end
-$var wire 1 9 sw [0] $end
+$scope module LogicalStep_Lab3_top_vlg_vec_tst $end
+$var reg 1 ! clk_in $end
+$var reg 4 " pb [3:0] $end
+$var reg 8 # sw [7:0] $end
+$var wire 1 $ leds [11] $end
+$var wire 1 % leds [10] $end
+$var wire 1 & leds [9] $end
+$var wire 1 ' leds [8] $end
+$var wire 1 ( leds [7] $end
+$var wire 1 ) leds [6] $end
+$var wire 1 * leds [5] $end
+$var wire 1 + leds [4] $end
+$var wire 1 , leds [3] $end
+$var wire 1 - leds [2] $end
+$var wire 1 . leds [1] $end
+$var wire 1 / leds [0] $end
 
 $scope module i1 $end
-$var wire 1 : gnd $end
-$var wire 1 ; vcc $end
-$var wire 1 < unknown $end
-$var wire 1 = devoe $end
-$var wire 1 > devclrn $end
-$var wire 1 ? devpor $end
-$var wire 1 @ ww_devoe $end
-$var wire 1 A ww_devclrn $end
-$var wire 1 B ww_devpor $end
-$var wire 1 C ww_clk_in $end
-$var wire 1 D ww_pb [3] $end
-$var wire 1 E ww_pb [2] $end
-$var wire 1 F ww_pb [1] $end
-$var wire 1 G ww_pb [0] $end
-$var wire 1 H ww_sw [7] $end
-$var wire 1 I ww_sw [6] $end
-$var wire 1 J ww_sw [5] $end
-$var wire 1 K ww_sw [4] $end
-$var wire 1 L ww_sw [3] $end
-$var wire 1 M ww_sw [2] $end
-$var wire 1 N ww_sw [1] $end
-$var wire 1 O ww_sw [0] $end
-$var wire 1 P ww_leds [11] $end
-$var wire 1 Q ww_leds [10] $end
-$var wire 1 R ww_leds [9] $end
-$var wire 1 S ww_leds [8] $end
-$var wire 1 T ww_leds [7] $end
-$var wire 1 U ww_leds [6] $end
-$var wire 1 V ww_leds [5] $end
-$var wire 1 W ww_leds [4] $end
-$var wire 1 X ww_leds [3] $end
-$var wire 1 Y ww_leds [2] $end
-$var wire 1 Z ww_leds [1] $end
-$var wire 1 [ ww_leds [0] $end
-$var wire 1 \ \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ [4] $end
-$var wire 1 ] \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ [3] $end
-$var wire 1 ^ \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ [2] $end
-$var wire 1 _ \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ [1] $end
-$var wire 1 ` \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ [0] $end
-$var wire 1 a \clk_in~input_o\ $end
-$var wire 1 b \pb[0]~input_o\ $end
-$var wire 1 c \pb[1]~input_o\ $end
-$var wire 1 d \pb[2]~input_o\ $end
-$var wire 1 e \pb[3]~input_o\ $end
-$var wire 1 f \~QUARTUS_CREATED_GND~I_combout\ $end
-$var wire 1 g \~QUARTUS_CREATED_UNVM~~busy\ $end
-$var wire 1 h \~QUARTUS_CREATED_ADC1~~eoc\ $end
-$var wire 1 i \leds[0]~output_o\ $end
-$var wire 1 j \leds[1]~output_o\ $end
-$var wire 1 k \leds[2]~output_o\ $end
-$var wire 1 l \leds[3]~output_o\ $end
-$var wire 1 m \leds[4]~output_o\ $end
-$var wire 1 n \leds[5]~output_o\ $end
-$var wire 1 o \leds[6]~output_o\ $end
-$var wire 1 p \leds[7]~output_o\ $end
-$var wire 1 q \leds[8]~output_o\ $end
-$var wire 1 r \leds[9]~output_o\ $end
-$var wire 1 s \leds[10]~output_o\ $end
-$var wire 1 t \leds[11]~output_o\ $end
-$var wire 1 u \sw[7]~input_o\ $end
-$var wire 1 v \sw[3]~input_o\ $end
-$var wire 1 w \sw[2]~input_o\ $end
-$var wire 1 x \sw[6]~input_o\ $end
-$var wire 1 y \comparator|ALTB~2_combout\ $end
-$var wire 1 z \sw[4]~input_o\ $end
-$var wire 1 { \sw[0]~input_o\ $end
-$var wire 1 | \sw[1]~input_o\ $end
-$var wire 1 } \sw[5]~input_o\ $end
-$var wire 1 ~ \comparator|ALTB~1_combout\ $end
-$var wire 1 !! \comparator|ALTB~0_combout\ $end
-$var wire 1 "! \comparator|ALTB~3_combout\ $end
-$var wire 1 #! \comparator|AEQB~0_combout\ $end
-$var wire 1 $! \comparator|AEQB~combout\ $end
-$var wire 1 %! \comparator|AGTB~1_combout\ $end
-$var wire 1 &! \comparator|AGTB~0_combout\ $end
-$var wire 1 '! \comparator|AGTB~2_combout\ $end
-$var wire 1 (! \comparator|ALT_INV_AEQB~combout\ $end
+$var wire 1 0 gnd $end
+$var wire 1 1 vcc $end
+$var wire 1 2 unknown $end
+$var tri1 1 3 devclrn $end
+$var tri1 1 4 devpor $end
+$var tri1 1 5 devoe $end
+$var wire 1 6 ~QUARTUS_CREATED_GND~I_combout $end
+$var wire 1 7 ~QUARTUS_CREATED_UNVM~~busy $end
+$var wire 1 8 ~QUARTUS_CREATED_ADC1~~eoc $end
+$var wire 1 9 leds[0]~output_o $end
+$var wire 1 : leds[1]~output_o $end
+$var wire 1 ; leds[2]~output_o $end
+$var wire 1 < leds[3]~output_o $end
+$var wire 1 = leds[4]~output_o $end
+$var wire 1 > leds[5]~output_o $end
+$var wire 1 ? leds[6]~output_o $end
+$var wire 1 @ leds[7]~output_o $end
+$var wire 1 A leds[8]~output_o $end
+$var wire 1 B leds[9]~output_o $end
+$var wire 1 C leds[10]~output_o $end
+$var wire 1 D leds[11]~output_o $end
+$var wire 1 E pb[3]~input_o $end
+$var wire 1 F sw[6]~input_o $end
+$var wire 1 G sw[2]~input_o $end
+$var wire 1 H Target_Temp|temp_out[2]~1_combout $end
+$var wire 1 I sw[3]~input_o $end
+$var wire 1 J sw[7]~input_o $end
+$var wire 1 K Target_Temp|temp_out[3]~0_combout $end
+$var wire 1 L clk_in~input_o $end
+$var wire 1 M clk_in~inputclkctrl_outclk $end
+$var wire 1 N pb[1]~input_o $end
+$var wire 1 O pb[2]~input_o $end
+$var wire 1 P pb[0]~input_o $end
+$var wire 1 Q Control_Energy|BLOWER~2_combout $end
+$var wire 1 R Comparator|AGTB~0_combout $end
+$var wire 1 S sw[1]~input_o $end
+$var wire 1 T sw[5]~input_o $end
+$var wire 1 U Target_Temp|temp_out[1]~2_combout $end
+$var wire 1 V sw[0]~input_o $end
+$var wire 1 W sw[4]~input_o $end
+$var wire 1 X Target_Temp|temp_out[0]~3_combout $end
+$var wire 1 Y HVAC_Sim|counter:cnt[0]~3_combout $end
+$var wire 1 Z HVAC_Sim|counter:cnt[0]~q $end
+$var wire 1 [ Comparator|AGTB~1_combout $end
+$var wire 1 \ HVAC_Sim|counter:cnt[0]~0_combout $end
+$var wire 1 ] HVAC_Sim|counter:cnt[0]~1_combout $end
+$var wire 1 ^ Comparator|comp0|AEQB~0_combout $end
+$var wire 1 _ Comparator|AEQB~0_combout $end
+$var wire 1 ` HVAC_Sim|counter:cnt[0]~2_combout $end
+$var wire 1 a HVAC_Sim|Add0~1_cout $end
+$var wire 1 b HVAC_Sim|Add0~2_combout $end
+$var wire 1 c HVAC_Sim|counter:cnt[1]~0_combout $end
+$var wire 1 d HVAC_Sim|counter:cnt[1]~q $end
+$var wire 1 e HVAC_Sim|Add0~3 $end
+$var wire 1 f HVAC_Sim|Add0~4_combout $end
+$var wire 1 g HVAC_Sim|counter:cnt[2]~q $end
+$var wire 1 h Comparator|ALTB~2_combout $end
+$var wire 1 i HVAC_Sim|counter~0_combout $end
+$var wire 1 j Comparator|ALTB~1_combout $end
+$var wire 1 k HVAC_Sim|counter~1_combout $end
+$var wire 1 l HVAC_Sim|Add0~5 $end
+$var wire 1 m HVAC_Sim|Add0~6_combout $end
+$var wire 1 n HVAC_Sim|counter:cnt[3]~q $end
+$var wire 1 o Comparator|ALTB~0_combout $end
+$var wire 1 p Comparator|ALTB~3_combout $end
+$var wire 1 q Comparator|AGTB~2_combout $end
+$var wire 1 r Control_Energy|BLOWER~combout $end
+$var wire 1 s Tester1|TEST_PASS~3_combout $end
+$var wire 1 t Tester1|TEST_PASS~4_combout $end
+$var wire 1 u Tester1|TEST_PASS~5_combout $end
+$var wire 1 v Tester1|TEST_PASS~7_combout $end
+$var wire 1 w Tester1|TEST_PASS~6_combout $end
+$var wire 1 x Tester1|TEST_PASS~8_combout $end
+$var wire 1 y Tester1|TEST_PASS~0_combout $end
+$var wire 1 z Tester1|TEST_PASS~1_combout $end
+$var wire 1 { Tester1|TEST_PASS~2_combout $end
+$var wire 1 | Tester1|TEST_PASS~9_combout $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
 x!
-0:
-1;
+bx "
+b1000 #
+x/
+x.
+0-
+x,
+x+
+x*
+0)
+x(
+0'
+0&
+0%
+0$
+00
+11
+x2
+13
+14
+15
+06
+z7
+z8
+x9
+x:
+0;
 x<
-1=
-1>
-1?
-1@
-1A
-1B
-xC
-xa
+x=
+x>
+0?
+x@
+0A
+0B
+0C
+0D
+xE
+0F
+0G
+0H
+1I
+0J
+xK
+xL
+xM
+xN
+xO
+xP
+xQ
+0R
+0S
+0T
+0U
+0V
+0W
+0X
+xY
+0Z
+0[
+0\
+0]
+0^
+x_
+x`
+0a
 xb
 xc
-xd
-xe
-0f
-zg
-zh
-0i
+0d
+1e
+xf
+0g
+xh
+1i
 0j
-1k
+xk
 0l
-0m
+xm
 0n
-0o
-0p
+xo
+xp
 0q
-0r
+xr
 0s
 0t
 0u
@@ -160,206 +203,134 @@ zh
 0y
 0z
 0{
-1|
-0}
-0~
-0!!
-0"!
-1#!
-1$!
-1%!
-1&!
-1'!
-0(!
-02
-03
-04
-05
-06
-17
-18
-09
-xD
-xE
-xF
-xG
-0H
-0I
-0J
-0K
-0L
-1M
-1N
-0O
-0P
-0Q
-0R
-0S
-0T
-0U
-0V
-0W
-0X
-1Y
-0Z
-0[
-0\
-0]
-0^
-0_
-0`
-0"
-0#
-0$
-0%
-0&
-0'
-0(
-0)
-0*
-1+
-0,
-0-
-x.
-x/
-x0
-x1
+0|
 $end
 #62500
-15
-1K
-1z
+b11000 #
+1W
+x^
+xX
+xj
 #125000
-05
-14
-0K
-1J
-1}
-0z
-0#!
-0%!
+b111000 #
+b101000 #
+1T
+0W
+xU
+0^
+0X
 #187500
-15
-1K
-1z
-1~
-1#!
+b111000 #
+1W
+x^
+xX
 #250000
-05
-04
-13
-0K
-0J
-1I
-1x
-0}
-0z
-0~
-1%!
-1y
-0&!
-#312500
-15
-1K
-1z
-#375000
-05
-14
-0K
-1J
-1}
-0z
-0#!
-0%!
-0'!
-0$!
-1(!
-0k
-1j
-0Y
-1Z
-0+
-1,
-#437500
-15
-1K
-1z
-1~
-1#!
-1$!
-1"!
-0(!
-1i
+b1111000 #
+b1011000 #
+b1001000 #
+1F
+0T
+0W
+xH
+0U
+0^
+0X
 0j
-1[
-0Z
-1-
-0,
+#312500
+b1011000 #
+1W
+x^
+xX
+xj
+#375000
+b1111000 #
+b1101000 #
+1T
+0W
+xU
+0^
+0X
+#437500
+b1111000 #
+1W
+x^
+xX
 #500000
-05
-04
-03
-12
-0K
-0J
-0I
-1H
-1u
-0x
-0}
-0z
-0~
-1%!
-0y
-1!!
+b11111000 #
+b10111000 #
+b10011000 #
+b10001000 #
+1J
+0F
+0T
+0W
+1K
+0H
+0U
+0^
+0X
+1o
+0h
+0j
+1k
+1_
+1p
+19
+0:
+0b
+0.
+1/
+0m
+0f
+0c
 #562500
-15
-1K
-1z
+b10011000 #
+1W
+x^
+xX
+xj
 #625000
-05
-14
-0K
-1J
-1}
-0z
-0#!
-0%!
+b10111000 #
+b10101000 #
+1T
+0W
+xU
+0^
+0X
 #687500
-15
-1K
-1z
-1~
-1#!
+b10111000 #
+1W
+x^
+xX
 #750000
-05
-04
-13
-0K
-0J
-1I
-1x
-0}
-0z
-0~
-1%!
+b11111000 #
+b11011000 #
+b11001000 #
+1F
+0T
+0W
+xH
+0U
+0^
+0X
+0j
 #812500
-15
-1K
-1z
+b11011000 #
+1W
+x^
+xX
+xj
 #875000
-05
-14
-0K
-1J
-1}
-0z
-0#!
-0%!
+b11111000 #
+b11101000 #
+1T
+0W
+xU
+0^
+0X
 #937500
-15
-1K
-1z
-1~
-1#!
+b11111000 #
+1W
+x^
+xX
 #1000000

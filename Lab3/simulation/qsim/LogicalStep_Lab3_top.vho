@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition"
 
--- DATE "03/10/2021 00:35:18"
+-- DATE "03/12/2021 12:46:04"
 
 -- 
 -- Device: Altera 10M08DAF484C8G Package FBGA484
@@ -81,8 +81,10 @@ ww_devpor <= devpor;
 END structure;
 
 
+LIBRARY ALTERA;
 LIBRARY FIFTYFIVENM;
 LIBRARY IEEE;
+USE ALTERA.ALTERA_PRIMITIVES_COMPONENTS.ALL;
 USE FIFTYFIVENM.FIFTYFIVENM_COMPONENTS.ALL;
 USE IEEE.STD_LOGIC_1164.ALL;
 
@@ -91,36 +93,36 @@ ENTITY 	LogicalStep_Lab3_top IS
 	clk_in : IN std_logic;
 	pb : IN std_logic_vector(3 DOWNTO 0);
 	sw : IN std_logic_vector(7 DOWNTO 0);
-	leds : OUT std_logic_vector(11 DOWNTO 0)
+	leds : BUFFER std_logic_vector(11 DOWNTO 0)
 	);
 END LogicalStep_Lab3_top;
 
 -- Design Ports Information
--- clk_in	=>  Location: PIN_AA7,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- pb[0]	=>  Location: PIN_M1,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- pb[1]	=>  Location: PIN_B5,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- pb[2]	=>  Location: PIN_P3,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- pb[3]	=>  Location: PIN_D14,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- leds[0]	=>  Location: PIN_D6,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- leds[1]	=>  Location: PIN_B1,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- leds[2]	=>  Location: PIN_M2,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- leds[3]	=>  Location: PIN_AB7,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- leds[4]	=>  Location: PIN_E16,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- leds[5]	=>  Location: PIN_D7,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- leds[6]	=>  Location: PIN_N19,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- leds[7]	=>  Location: PIN_AB5,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- leds[8]	=>  Location: PIN_AB16,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- leds[9]	=>  Location: PIN_B14,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- leds[10]	=>  Location: PIN_L18,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- leds[11]	=>  Location: PIN_P11,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- sw[7]	=>  Location: PIN_N3,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- sw[6]	=>  Location: PIN_C3,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- sw[2]	=>  Location: PIN_C5,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- sw[3]	=>  Location: PIN_E6,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- sw[5]	=>  Location: PIN_C2,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- sw[4]	=>  Location: PIN_N2,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- sw[0]	=>  Location: PIN_M8,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- sw[1]	=>  Location: PIN_M9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- leds[0]	=>  Location: PIN_F5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- leds[1]	=>  Location: PIN_E4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- leds[2]	=>  Location: PIN_E3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- leds[3]	=>  Location: PIN_J10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- leds[4]	=>  Location: PIN_D9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- leds[5]	=>  Location: PIN_H11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- leds[6]	=>  Location: PIN_D10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- leds[7]	=>  Location: PIN_F3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- leds[8]	=>  Location: PIN_A4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- leds[9]	=>  Location: PIN_F4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- leds[10]	=>  Location: PIN_B3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- leds[11]	=>  Location: PIN_D7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- sw[7]	=>  Location: PIN_E10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- sw[3]	=>  Location: PIN_B7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- pb[3]	=>  Location: PIN_J8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- sw[6]	=>  Location: PIN_G4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- sw[2]	=>  Location: PIN_C8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- sw[5]	=>  Location: PIN_D8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- sw[1]	=>  Location: PIN_E9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- sw[4]	=>  Location: PIN_C6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- sw[0]	=>  Location: PIN_J9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- pb[0]	=>  Location: PIN_C7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- pb[1]	=>  Location: PIN_A5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- pb[2]	=>  Location: PIN_A6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- clk_in	=>  Location: PIN_M8,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 ARCHITECTURE structure OF LogicalStep_Lab3_top IS
@@ -138,11 +140,7 @@ SIGNAL ww_pb : std_logic_vector(3 DOWNTO 0);
 SIGNAL ww_sw : std_logic_vector(7 DOWNTO 0);
 SIGNAL ww_leds : std_logic_vector(11 DOWNTO 0);
 SIGNAL \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ : std_logic_vector(4 DOWNTO 0);
-SIGNAL \clk_in~input_o\ : std_logic;
-SIGNAL \pb[0]~input_o\ : std_logic;
-SIGNAL \pb[1]~input_o\ : std_logic;
-SIGNAL \pb[2]~input_o\ : std_logic;
-SIGNAL \pb[3]~input_o\ : std_logic;
+SIGNAL \clk_in~inputclkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \~QUARTUS_CREATED_GND~I_combout\ : std_logic;
 SIGNAL \~QUARTUS_CREATED_UNVM~~busy\ : std_logic;
 SIGNAL \~QUARTUS_CREATED_ADC1~~eoc\ : std_logic;
@@ -158,24 +156,64 @@ SIGNAL \leds[8]~output_o\ : std_logic;
 SIGNAL \leds[9]~output_o\ : std_logic;
 SIGNAL \leds[10]~output_o\ : std_logic;
 SIGNAL \leds[11]~output_o\ : std_logic;
-SIGNAL \sw[7]~input_o\ : std_logic;
-SIGNAL \sw[3]~input_o\ : std_logic;
-SIGNAL \sw[2]~input_o\ : std_logic;
+SIGNAL \pb[3]~input_o\ : std_logic;
 SIGNAL \sw[6]~input_o\ : std_logic;
-SIGNAL \comparator|ALTB~2_combout\ : std_logic;
-SIGNAL \sw[4]~input_o\ : std_logic;
-SIGNAL \sw[0]~input_o\ : std_logic;
+SIGNAL \sw[2]~input_o\ : std_logic;
+SIGNAL \Target_Temp|temp_out[2]~1_combout\ : std_logic;
+SIGNAL \sw[3]~input_o\ : std_logic;
+SIGNAL \sw[7]~input_o\ : std_logic;
+SIGNAL \Target_Temp|temp_out[3]~0_combout\ : std_logic;
+SIGNAL \clk_in~input_o\ : std_logic;
+SIGNAL \clk_in~inputclkctrl_outclk\ : std_logic;
+SIGNAL \pb[1]~input_o\ : std_logic;
+SIGNAL \pb[2]~input_o\ : std_logic;
+SIGNAL \pb[0]~input_o\ : std_logic;
+SIGNAL \Control_Energy|BLOWER~2_combout\ : std_logic;
+SIGNAL \Comparator|AGTB~0_combout\ : std_logic;
 SIGNAL \sw[1]~input_o\ : std_logic;
 SIGNAL \sw[5]~input_o\ : std_logic;
-SIGNAL \comparator|ALTB~1_combout\ : std_logic;
-SIGNAL \comparator|ALTB~0_combout\ : std_logic;
-SIGNAL \comparator|ALTB~3_combout\ : std_logic;
-SIGNAL \comparator|AEQB~0_combout\ : std_logic;
-SIGNAL \comparator|AEQB~combout\ : std_logic;
-SIGNAL \comparator|AGTB~1_combout\ : std_logic;
-SIGNAL \comparator|AGTB~0_combout\ : std_logic;
-SIGNAL \comparator|AGTB~2_combout\ : std_logic;
-SIGNAL \comparator|ALT_INV_AEQB~combout\ : std_logic;
+SIGNAL \Target_Temp|temp_out[1]~2_combout\ : std_logic;
+SIGNAL \sw[0]~input_o\ : std_logic;
+SIGNAL \sw[4]~input_o\ : std_logic;
+SIGNAL \Target_Temp|temp_out[0]~3_combout\ : std_logic;
+SIGNAL \HVAC_Sim|counter:cnt[0]~3_combout\ : std_logic;
+SIGNAL \HVAC_Sim|counter:cnt[0]~q\ : std_logic;
+SIGNAL \Comparator|AGTB~1_combout\ : std_logic;
+SIGNAL \HVAC_Sim|counter:cnt[0]~0_combout\ : std_logic;
+SIGNAL \HVAC_Sim|counter:cnt[0]~1_combout\ : std_logic;
+SIGNAL \Comparator|comp0|AEQB~0_combout\ : std_logic;
+SIGNAL \Comparator|AEQB~0_combout\ : std_logic;
+SIGNAL \HVAC_Sim|counter:cnt[0]~2_combout\ : std_logic;
+SIGNAL \HVAC_Sim|Add0~1_cout\ : std_logic;
+SIGNAL \HVAC_Sim|Add0~2_combout\ : std_logic;
+SIGNAL \HVAC_Sim|counter:cnt[1]~0_combout\ : std_logic;
+SIGNAL \HVAC_Sim|counter:cnt[1]~q\ : std_logic;
+SIGNAL \HVAC_Sim|Add0~3\ : std_logic;
+SIGNAL \HVAC_Sim|Add0~4_combout\ : std_logic;
+SIGNAL \HVAC_Sim|counter:cnt[2]~q\ : std_logic;
+SIGNAL \Comparator|ALTB~2_combout\ : std_logic;
+SIGNAL \HVAC_Sim|counter~0_combout\ : std_logic;
+SIGNAL \Comparator|ALTB~1_combout\ : std_logic;
+SIGNAL \HVAC_Sim|counter~1_combout\ : std_logic;
+SIGNAL \HVAC_Sim|Add0~5\ : std_logic;
+SIGNAL \HVAC_Sim|Add0~6_combout\ : std_logic;
+SIGNAL \HVAC_Sim|counter:cnt[3]~q\ : std_logic;
+SIGNAL \Comparator|ALTB~0_combout\ : std_logic;
+SIGNAL \Comparator|ALTB~3_combout\ : std_logic;
+SIGNAL \Comparator|AGTB~2_combout\ : std_logic;
+SIGNAL \Control_Energy|BLOWER~combout\ : std_logic;
+SIGNAL \Tester1|TEST_PASS~3_combout\ : std_logic;
+SIGNAL \Tester1|TEST_PASS~4_combout\ : std_logic;
+SIGNAL \Tester1|TEST_PASS~5_combout\ : std_logic;
+SIGNAL \Tester1|TEST_PASS~7_combout\ : std_logic;
+SIGNAL \Tester1|TEST_PASS~6_combout\ : std_logic;
+SIGNAL \Tester1|TEST_PASS~8_combout\ : std_logic;
+SIGNAL \Tester1|TEST_PASS~0_combout\ : std_logic;
+SIGNAL \Tester1|TEST_PASS~1_combout\ : std_logic;
+SIGNAL \Tester1|TEST_PASS~2_combout\ : std_logic;
+SIGNAL \Tester1|TEST_PASS~9_combout\ : std_logic;
+SIGNAL \Control_Energy|ALT_INV_BLOWER~combout\ : std_logic;
+SIGNAL \Comparator|ALT_INV_AEQB~0_combout\ : std_logic;
 
 COMPONENT hard_block
     PORT (
@@ -195,14 +233,17 @@ ww_devclrn <= devclrn;
 ww_devpor <= devpor;
 
 \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ <= (\~QUARTUS_CREATED_GND~I_combout\ & \~QUARTUS_CREATED_GND~I_combout\ & \~QUARTUS_CREATED_GND~I_combout\ & \~QUARTUS_CREATED_GND~I_combout\ & \~QUARTUS_CREATED_GND~I_combout\);
-\comparator|ALT_INV_AEQB~combout\ <= NOT \comparator|AEQB~combout\;
+
+\clk_in~inputclkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \clk_in~input_o\);
+\Control_Energy|ALT_INV_BLOWER~combout\ <= NOT \Control_Energy|BLOWER~combout\;
+\Comparator|ALT_INV_AEQB~0_combout\ <= NOT \Comparator|AEQB~0_combout\;
 auto_generated_inst : hard_block
 PORT MAP (
 	devoe => ww_devoe,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor);
 
--- Location: LCCOMB_X11_Y12_N16
+-- Location: LCCOMB_X11_Y22_N20
 \~QUARTUS_CREATED_GND~I\ : fiftyfivenm_lcell_comb
 -- Equation(s):
 -- \~QUARTUS_CREATED_GND~I_combout\ = GND
@@ -215,7 +256,7 @@ GENERIC MAP (
 PORT MAP (
 	combout => \~QUARTUS_CREATED_GND~I_combout\);
 
--- Location: IOOBUF_X1_Y10_N9
+-- Location: IOOBUF_X10_Y22_N16
 \leds[0]~output\ : fiftyfivenm_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -223,11 +264,11 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \comparator|ALTB~3_combout\,
+	i => \Comparator|ALTB~3_combout\,
 	devoe => ww_devoe,
 	o => \leds[0]~output_o\);
 
--- Location: IOOBUF_X1_Y10_N2
+-- Location: IOOBUF_X10_Y22_N2
 \leds[1]~output\ : fiftyfivenm_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -235,11 +276,11 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \comparator|ALT_INV_AEQB~combout\,
+	i => \Comparator|ALT_INV_AEQB~0_combout\,
 	devoe => ww_devoe,
 	o => \leds[1]~output_o\);
 
--- Location: IOOBUF_X0_Y5_N2
+-- Location: IOOBUF_X10_Y22_N9
 \leds[2]~output\ : fiftyfivenm_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -247,11 +288,11 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \comparator|AGTB~2_combout\,
+	i => \Comparator|AGTB~2_combout\,
 	devoe => ww_devoe,
 	o => \leds[2]~output_o\);
 
--- Location: IOOBUF_X15_Y0_N30
+-- Location: IOOBUF_X17_Y25_N23
 \leds[3]~output\ : fiftyfivenm_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -259,11 +300,11 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => GND,
+	i => \Control_Energy|ALT_INV_BLOWER~combout\,
 	devoe => ww_devoe,
 	o => \leds[3]~output_o\);
 
--- Location: IOOBUF_X29_Y25_N2
+-- Location: IOOBUF_X15_Y25_N23
 \leds[4]~output\ : fiftyfivenm_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -271,11 +312,11 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => GND,
+	i => \pb[1]~input_o\,
 	devoe => ww_devoe,
 	o => \leds[4]~output_o\);
 
--- Location: IOOBUF_X13_Y25_N30
+-- Location: IOOBUF_X17_Y25_N30
 \leds[5]~output\ : fiftyfivenm_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -283,11 +324,11 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => GND,
+	i => \pb[0]~input_o\,
 	devoe => ww_devoe,
 	o => \leds[5]~output_o\);
 
--- Location: IOOBUF_X31_Y14_N16
+-- Location: IOOBUF_X13_Y25_N9
 \leds[6]~output\ : fiftyfivenm_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -295,11 +336,11 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => GND,
+	i => \Tester1|TEST_PASS~9_combout\,
 	devoe => ww_devoe,
 	o => \leds[6]~output_o\);
 
--- Location: IOOBUF_X13_Y0_N23
+-- Location: IOOBUF_X10_Y21_N9
 \leds[7]~output\ : fiftyfivenm_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -307,11 +348,11 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => GND,
+	i => \pb[3]~input_o\,
 	devoe => ww_devoe,
 	o => \leds[7]~output_o\);
 
--- Location: IOOBUF_X27_Y0_N16
+-- Location: IOOBUF_X13_Y25_N2
 \leds[8]~output\ : fiftyfivenm_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -319,11 +360,11 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => GND,
+	i => \HVAC_Sim|counter:cnt[0]~q\,
 	devoe => ww_devoe,
 	o => \leds[8]~output_o\);
 
--- Location: IOOBUF_X24_Y25_N9
+-- Location: IOOBUF_X10_Y22_N23
 \leds[9]~output\ : fiftyfivenm_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -331,11 +372,11 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => GND,
+	i => \HVAC_Sim|counter:cnt[1]~q\,
 	devoe => ww_devoe,
 	o => \leds[9]~output_o\);
 
--- Location: IOOBUF_X31_Y19_N16
+-- Location: IOOBUF_X11_Y25_N30
 \leds[10]~output\ : fiftyfivenm_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -343,11 +384,11 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => GND,
+	i => \HVAC_Sim|counter:cnt[2]~q\,
 	devoe => ww_devoe,
 	o => \leds[10]~output_o\);
 
--- Location: IOOBUF_X17_Y0_N23
+-- Location: IOOBUF_X13_Y25_N30
 \leds[11]~output\ : fiftyfivenm_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -355,12 +396,12 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => GND,
+	i => \HVAC_Sim|counter:cnt[3]~q\,
 	devoe => ww_devoe,
 	o => \leds[11]~output_o\);
 
--- Location: IOIBUF_X0_Y6_N1
-\sw[7]~input\ : fiftyfivenm_io_ibuf
+-- Location: IOIBUF_X10_Y21_N15
+\pb[3]~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -368,34 +409,10 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_sw(7),
-	o => \sw[7]~input_o\);
+	i => ww_pb(3),
+	o => \pb[3]~input_o\);
 
--- Location: IOIBUF_X1_Y10_N15
-\sw[3]~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_sw(3),
-	o => \sw[3]~input_o\);
-
--- Location: IOIBUF_X3_Y10_N1
-\sw[2]~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_sw(2),
-	o => \sw[2]~input_o\);
-
--- Location: IOIBUF_X1_Y10_N22
+-- Location: IOIBUF_X10_Y21_N1
 \sw[6]~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -407,25 +424,8 @@ PORT MAP (
 	i => ww_sw(6),
 	o => \sw[6]~input_o\);
 
--- Location: LCCOMB_X2_Y6_N20
-\comparator|ALTB~2\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \comparator|ALTB~2_combout\ = (\sw[7]~input_o\ & (\sw[3]~input_o\ & (\sw[2]~input_o\ $ (!\sw[6]~input_o\)))) # (!\sw[7]~input_o\ & (!\sw[3]~input_o\ & (\sw[2]~input_o\ $ (!\sw[6]~input_o\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1001000000001001",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \sw[7]~input_o\,
-	datab => \sw[3]~input_o\,
-	datac => \sw[2]~input_o\,
-	datad => \sw[6]~input_o\,
-	combout => \comparator|ALTB~2_combout\);
-
--- Location: IOIBUF_X0_Y6_N8
-\sw[4]~input\ : fiftyfivenm_io_ibuf
+-- Location: IOIBUF_X17_Y25_N8
+\sw[2]~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -433,178 +433,66 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_sw(4),
-	o => \sw[4]~input_o\);
+	i => ww_sw(2),
+	o => \sw[2]~input_o\);
+
+-- Location: LCCOMB_X14_Y22_N30
+\Target_Temp|temp_out[2]~1\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \Target_Temp|temp_out[2]~1_combout\ = (\pb[3]~input_o\ & (\sw[6]~input_o\)) # (!\pb[3]~input_o\ & ((\sw[2]~input_o\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111001111000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \pb[3]~input_o\,
+	datac => \sw[6]~input_o\,
+	datad => \sw[2]~input_o\,
+	combout => \Target_Temp|temp_out[2]~1_combout\);
+
+-- Location: IOIBUF_X15_Y25_N1
+\sw[3]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_sw(3),
+	o => \sw[3]~input_o\);
+
+-- Location: IOIBUF_X17_Y25_N1
+\sw[7]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_sw(7),
+	o => \sw[7]~input_o\);
+
+-- Location: LCCOMB_X14_Y22_N28
+\Target_Temp|temp_out[3]~0\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \Target_Temp|temp_out[3]~0_combout\ = (\pb[3]~input_o\ & ((\sw[7]~input_o\))) # (!\pb[3]~input_o\ & (\sw[3]~input_o\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111110000001100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \sw[3]~input_o\,
+	datac => \pb[3]~input_o\,
+	datad => \sw[7]~input_o\,
+	combout => \Target_Temp|temp_out[3]~0_combout\);
 
 -- Location: IOIBUF_X0_Y6_N15
-\sw[0]~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_sw(0),
-	o => \sw[0]~input_o\);
-
--- Location: IOIBUF_X0_Y6_N22
-\sw[1]~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_sw(1),
-	o => \sw[1]~input_o\);
-
--- Location: IOIBUF_X1_Y10_N29
-\sw[5]~input\ : fiftyfivenm_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_sw(5),
-	o => \sw[5]~input_o\);
-
--- Location: LCCOMB_X2_Y6_N26
-\comparator|ALTB~1\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \comparator|ALTB~1_combout\ = (\sw[1]~input_o\ & (\sw[4]~input_o\ & (!\sw[0]~input_o\ & \sw[5]~input_o\))) # (!\sw[1]~input_o\ & ((\sw[5]~input_o\) # ((\sw[4]~input_o\ & !\sw[0]~input_o\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0010111100000010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \sw[4]~input_o\,
-	datab => \sw[0]~input_o\,
-	datac => \sw[1]~input_o\,
-	datad => \sw[5]~input_o\,
-	combout => \comparator|ALTB~1_combout\);
-
--- Location: LCCOMB_X2_Y6_N24
-\comparator|ALTB~0\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \comparator|ALTB~0_combout\ = (\sw[7]~input_o\ & (((!\sw[2]~input_o\ & \sw[6]~input_o\)) # (!\sw[3]~input_o\))) # (!\sw[7]~input_o\ & (!\sw[3]~input_o\ & (!\sw[2]~input_o\ & \sw[6]~input_o\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0010101100100010",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \sw[7]~input_o\,
-	datab => \sw[3]~input_o\,
-	datac => \sw[2]~input_o\,
-	datad => \sw[6]~input_o\,
-	combout => \comparator|ALTB~0_combout\);
-
--- Location: LCCOMB_X2_Y6_N22
-\comparator|ALTB~3\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \comparator|ALTB~3_combout\ = (\comparator|ALTB~0_combout\) # ((\comparator|ALTB~2_combout\ & \comparator|ALTB~1_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111111000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \comparator|ALTB~2_combout\,
-	datac => \comparator|ALTB~1_combout\,
-	datad => \comparator|ALTB~0_combout\,
-	combout => \comparator|ALTB~3_combout\);
-
--- Location: LCCOMB_X2_Y6_N0
-\comparator|AEQB~0\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \comparator|AEQB~0_combout\ = (\sw[4]~input_o\ & ((\sw[1]~input_o\ $ (\sw[5]~input_o\)) # (!\sw[0]~input_o\))) # (!\sw[4]~input_o\ & ((\sw[0]~input_o\) # (\sw[1]~input_o\ $ (\sw[5]~input_o\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0110111111110110",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \sw[4]~input_o\,
-	datab => \sw[0]~input_o\,
-	datac => \sw[1]~input_o\,
-	datad => \sw[5]~input_o\,
-	combout => \comparator|AEQB~0_combout\);
-
--- Location: LCCOMB_X2_Y6_N10
-\comparator|AEQB\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \comparator|AEQB~combout\ = (\comparator|AEQB~0_combout\) # (!\comparator|ALTB~2_combout\)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111100110011",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datab => \comparator|ALTB~2_combout\,
-	datad => \comparator|AEQB~0_combout\,
-	combout => \comparator|AEQB~combout\);
-
--- Location: LCCOMB_X2_Y6_N6
-\comparator|AGTB~1\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \comparator|AGTB~1_combout\ = (\sw[1]~input_o\ & (((!\sw[4]~input_o\ & \sw[0]~input_o\)) # (!\sw[5]~input_o\))) # (!\sw[1]~input_o\ & (!\sw[4]~input_o\ & (\sw[0]~input_o\ & !\sw[5]~input_o\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0100000011110100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \sw[4]~input_o\,
-	datab => \sw[0]~input_o\,
-	datac => \sw[1]~input_o\,
-	datad => \sw[5]~input_o\,
-	combout => \comparator|AGTB~1_combout\);
-
--- Location: LCCOMB_X2_Y6_N12
-\comparator|AGTB~0\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \comparator|AGTB~0_combout\ = (\sw[7]~input_o\ & (\sw[3]~input_o\ & (\sw[2]~input_o\ & !\sw[6]~input_o\))) # (!\sw[7]~input_o\ & ((\sw[3]~input_o\) # ((\sw[2]~input_o\ & !\sw[6]~input_o\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0100010011010100",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \sw[7]~input_o\,
-	datab => \sw[3]~input_o\,
-	datac => \sw[2]~input_o\,
-	datad => \sw[6]~input_o\,
-	combout => \comparator|AGTB~0_combout\);
-
--- Location: LCCOMB_X2_Y6_N16
-\comparator|AGTB~2\ : fiftyfivenm_lcell_comb
--- Equation(s):
--- \comparator|AGTB~2_combout\ = (\comparator|AGTB~0_combout\) # ((\comparator|AGTB~1_combout\ & \comparator|ALTB~2_combout\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111110001000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \comparator|AGTB~1_combout\,
-	datab => \comparator|ALTB~2_combout\,
-	datad => \comparator|AGTB~0_combout\,
-	combout => \comparator|AGTB~2_combout\);
-
--- Location: IOIBUF_X13_Y0_N8
 \clk_in~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -616,19 +504,20 @@ PORT MAP (
 	i => ww_clk_in,
 	o => \clk_in~input_o\);
 
--- Location: IOIBUF_X0_Y5_N8
-\pb[0]~input\ : fiftyfivenm_io_ibuf
+-- Location: CLKCTRL_G3
+\clk_in~inputclkctrl\ : fiftyfivenm_clkctrl
 -- pragma translate_off
 GENERIC MAP (
-	bus_hold => "false",
-	listen_to_nsleep_signal => "false",
-	simulate_z_as => "z")
+	clock_type => "global clock",
+	ena_register_mode => "none")
 -- pragma translate_on
 PORT MAP (
-	i => ww_pb(0),
-	o => \pb[0]~input_o\);
+	inclk => \clk_in~inputclkctrl_INCLK_bus\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	outclk => \clk_in~inputclkctrl_outclk\);
 
--- Location: IOIBUF_X6_Y10_N8
+-- Location: IOIBUF_X15_Y25_N29
 \pb[1]~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -640,7 +529,7 @@ PORT MAP (
 	i => ww_pb(1),
 	o => \pb[1]~input_o\);
 
--- Location: IOIBUF_X0_Y5_N15
+-- Location: IOIBUF_X15_Y25_N8
 \pb[2]~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -652,8 +541,8 @@ PORT MAP (
 	i => ww_pb(2),
 	o => \pb[2]~input_o\);
 
--- Location: IOIBUF_X24_Y25_N15
-\pb[3]~input\ : fiftyfivenm_io_ibuf
+-- Location: IOIBUF_X17_Y25_N15
+\pb[0]~input\ : fiftyfivenm_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
 	bus_hold => "false",
@@ -661,8 +550,688 @@ GENERIC MAP (
 	simulate_z_as => "z")
 -- pragma translate_on
 PORT MAP (
-	i => ww_pb(3),
-	o => \pb[3]~input_o\);
+	i => ww_pb(0),
+	o => \pb[0]~input_o\);
+
+-- Location: LCCOMB_X15_Y22_N28
+\Control_Energy|BLOWER~2\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \Control_Energy|BLOWER~2_combout\ = (\pb[1]~input_o\) # ((\pb[2]~input_o\) # (\pb[0]~input_o\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111111010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \pb[1]~input_o\,
+	datac => \pb[2]~input_o\,
+	datad => \pb[0]~input_o\,
+	combout => \Control_Energy|BLOWER~2_combout\);
+
+-- Location: LCCOMB_X13_Y22_N30
+\Comparator|AGTB~0\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \Comparator|AGTB~0_combout\ = (\Target_Temp|temp_out[3]~0_combout\ & (!\Target_Temp|temp_out[2]~1_combout\ & (\HVAC_Sim|counter:cnt[3]~q\ & \HVAC_Sim|counter:cnt[2]~q\))) # (!\Target_Temp|temp_out[3]~0_combout\ & ((\HVAC_Sim|counter:cnt[3]~q\) # 
+-- ((!\Target_Temp|temp_out[2]~1_combout\ & \HVAC_Sim|counter:cnt[2]~q\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111000100110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Target_Temp|temp_out[2]~1_combout\,
+	datab => \Target_Temp|temp_out[3]~0_combout\,
+	datac => \HVAC_Sim|counter:cnt[3]~q\,
+	datad => \HVAC_Sim|counter:cnt[2]~q\,
+	combout => \Comparator|AGTB~0_combout\);
+
+-- Location: IOIBUF_X13_Y25_N15
+\sw[1]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_sw(1),
+	o => \sw[1]~input_o\);
+
+-- Location: IOIBUF_X15_Y25_N15
+\sw[5]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_sw(5),
+	o => \sw[5]~input_o\);
+
+-- Location: LCCOMB_X14_Y22_N0
+\Target_Temp|temp_out[1]~2\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \Target_Temp|temp_out[1]~2_combout\ = (\pb[3]~input_o\ & ((\sw[5]~input_o\))) # (!\pb[3]~input_o\ & (\sw[1]~input_o\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111101000001010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \sw[1]~input_o\,
+	datac => \pb[3]~input_o\,
+	datad => \sw[5]~input_o\,
+	combout => \Target_Temp|temp_out[1]~2_combout\);
+
+-- Location: IOIBUF_X10_Y21_N22
+\sw[0]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_sw(0),
+	o => \sw[0]~input_o\);
+
+-- Location: IOIBUF_X13_Y25_N22
+\sw[4]~input\ : fiftyfivenm_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	listen_to_nsleep_signal => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_sw(4),
+	o => \sw[4]~input_o\);
+
+-- Location: LCCOMB_X14_Y22_N26
+\Target_Temp|temp_out[0]~3\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \Target_Temp|temp_out[0]~3_combout\ = (\pb[3]~input_o\ & ((\sw[4]~input_o\))) # (!\pb[3]~input_o\ & (\sw[0]~input_o\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100101011001010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \sw[0]~input_o\,
+	datab => \sw[4]~input_o\,
+	datac => \pb[3]~input_o\,
+	combout => \Target_Temp|temp_out[0]~3_combout\);
+
+-- Location: LCCOMB_X13_Y22_N10
+\HVAC_Sim|counter:cnt[0]~3\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \HVAC_Sim|counter:cnt[0]~3_combout\ = \HVAC_Sim|counter:cnt[0]~q\ $ (\HVAC_Sim|counter:cnt[0]~2_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000111111110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \HVAC_Sim|counter:cnt[0]~q\,
+	datad => \HVAC_Sim|counter:cnt[0]~2_combout\,
+	combout => \HVAC_Sim|counter:cnt[0]~3_combout\);
+
+-- Location: FF_X13_Y22_N11
+\HVAC_Sim|counter:cnt[0]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk_in~inputclkctrl_outclk\,
+	d => \HVAC_Sim|counter:cnt[0]~3_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \HVAC_Sim|counter:cnt[0]~q\);
+
+-- Location: LCCOMB_X13_Y22_N28
+\Comparator|AGTB~1\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \Comparator|AGTB~1_combout\ = (\Target_Temp|temp_out[1]~2_combout\ & (!\Target_Temp|temp_out[0]~3_combout\ & (\HVAC_Sim|counter:cnt[0]~q\ & \HVAC_Sim|counter:cnt[1]~q\))) # (!\Target_Temp|temp_out[1]~2_combout\ & ((\HVAC_Sim|counter:cnt[1]~q\) # 
+-- ((!\Target_Temp|temp_out[0]~3_combout\ & \HVAC_Sim|counter:cnt[0]~q\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111010100010000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Target_Temp|temp_out[1]~2_combout\,
+	datab => \Target_Temp|temp_out[0]~3_combout\,
+	datac => \HVAC_Sim|counter:cnt[0]~q\,
+	datad => \HVAC_Sim|counter:cnt[1]~q\,
+	combout => \Comparator|AGTB~1_combout\);
+
+-- Location: LCCOMB_X13_Y22_N26
+\HVAC_Sim|counter:cnt[0]~0\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \HVAC_Sim|counter:cnt[0]~0_combout\ = (\HVAC_Sim|counter:cnt[1]~q\) # ((\HVAC_Sim|counter:cnt[2]~q\) # ((\HVAC_Sim|counter:cnt[0]~q\) # (\HVAC_Sim|counter:cnt[3]~q\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111111110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \HVAC_Sim|counter:cnt[1]~q\,
+	datab => \HVAC_Sim|counter:cnt[2]~q\,
+	datac => \HVAC_Sim|counter:cnt[0]~q\,
+	datad => \HVAC_Sim|counter:cnt[3]~q\,
+	combout => \HVAC_Sim|counter:cnt[0]~0_combout\);
+
+-- Location: LCCOMB_X13_Y22_N24
+\HVAC_Sim|counter:cnt[0]~1\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \HVAC_Sim|counter:cnt[0]~1_combout\ = (\HVAC_Sim|counter:cnt[0]~0_combout\ & ((\Comparator|AGTB~0_combout\) # ((\Comparator|AGTB~1_combout\ & \Comparator|ALTB~2_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1110000010100000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Comparator|AGTB~0_combout\,
+	datab => \Comparator|AGTB~1_combout\,
+	datac => \HVAC_Sim|counter:cnt[0]~0_combout\,
+	datad => \Comparator|ALTB~2_combout\,
+	combout => \HVAC_Sim|counter:cnt[0]~1_combout\);
+
+-- Location: LCCOMB_X14_Y22_N8
+\Comparator|comp0|AEQB~0\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \Comparator|comp0|AEQB~0_combout\ = \HVAC_Sim|counter:cnt[0]~q\ $ (((\pb[3]~input_o\ & ((\sw[4]~input_o\))) # (!\pb[3]~input_o\ & (\sw[0]~input_o\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011010111001010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \sw[0]~input_o\,
+	datab => \sw[4]~input_o\,
+	datac => \pb[3]~input_o\,
+	datad => \HVAC_Sim|counter:cnt[0]~q\,
+	combout => \Comparator|comp0|AEQB~0_combout\);
+
+-- Location: LCCOMB_X14_Y22_N10
+\Comparator|AEQB~0\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \Comparator|AEQB~0_combout\ = (\Comparator|comp0|AEQB~0_combout\) # ((\HVAC_Sim|counter:cnt[1]~q\ $ (\Target_Temp|temp_out[1]~2_combout\)) # (!\Comparator|ALTB~2_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111011011111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \HVAC_Sim|counter:cnt[1]~q\,
+	datab => \Target_Temp|temp_out[1]~2_combout\,
+	datac => \Comparator|comp0|AEQB~0_combout\,
+	datad => \Comparator|ALTB~2_combout\,
+	combout => \Comparator|AEQB~0_combout\);
+
+-- Location: LCCOMB_X13_Y22_N6
+\HVAC_Sim|counter:cnt[0]~2\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \HVAC_Sim|counter:cnt[0]~2_combout\ = (!\Control_Energy|BLOWER~2_combout\ & (\Comparator|AEQB~0_combout\ & ((\HVAC_Sim|counter:cnt[0]~1_combout\) # (\HVAC_Sim|counter~1_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101000001000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Control_Energy|BLOWER~2_combout\,
+	datab => \HVAC_Sim|counter:cnt[0]~1_combout\,
+	datac => \Comparator|AEQB~0_combout\,
+	datad => \HVAC_Sim|counter~1_combout\,
+	combout => \HVAC_Sim|counter:cnt[0]~2_combout\);
+
+-- Location: LCCOMB_X13_Y22_N16
+\HVAC_Sim|Add0~1\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \HVAC_Sim|Add0~1_cout\ = CARRY(\HVAC_Sim|counter:cnt[0]~q\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000010101010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \HVAC_Sim|counter:cnt[0]~q\,
+	datad => VCC,
+	cout => \HVAC_Sim|Add0~1_cout\);
+
+-- Location: LCCOMB_X13_Y22_N18
+\HVAC_Sim|Add0~2\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \HVAC_Sim|Add0~2_combout\ = (\HVAC_Sim|counter:cnt[1]~q\ & ((\HVAC_Sim|counter~1_combout\ & (!\HVAC_Sim|Add0~1_cout\)) # (!\HVAC_Sim|counter~1_combout\ & (\HVAC_Sim|Add0~1_cout\ & VCC)))) # (!\HVAC_Sim|counter:cnt[1]~q\ & ((\HVAC_Sim|counter~1_combout\ & 
+-- ((\HVAC_Sim|Add0~1_cout\) # (GND))) # (!\HVAC_Sim|counter~1_combout\ & (!\HVAC_Sim|Add0~1_cout\))))
+-- \HVAC_Sim|Add0~3\ = CARRY((\HVAC_Sim|counter:cnt[1]~q\ & (\HVAC_Sim|counter~1_combout\ & !\HVAC_Sim|Add0~1_cout\)) # (!\HVAC_Sim|counter:cnt[1]~q\ & ((\HVAC_Sim|counter~1_combout\) # (!\HVAC_Sim|Add0~1_cout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0110100101001101",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \HVAC_Sim|counter:cnt[1]~q\,
+	datab => \HVAC_Sim|counter~1_combout\,
+	datad => VCC,
+	cin => \HVAC_Sim|Add0~1_cout\,
+	combout => \HVAC_Sim|Add0~2_combout\,
+	cout => \HVAC_Sim|Add0~3\);
+
+-- Location: LCCOMB_X13_Y22_N12
+\HVAC_Sim|counter:cnt[1]~0\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \HVAC_Sim|counter:cnt[1]~0_combout\ = (\HVAC_Sim|counter:cnt[0]~2_combout\ & ((\HVAC_Sim|Add0~2_combout\))) # (!\HVAC_Sim|counter:cnt[0]~2_combout\ & (\HVAC_Sim|counter:cnt[1]~q\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111101001010000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \HVAC_Sim|counter:cnt[0]~2_combout\,
+	datac => \HVAC_Sim|counter:cnt[1]~q\,
+	datad => \HVAC_Sim|Add0~2_combout\,
+	combout => \HVAC_Sim|counter:cnt[1]~0_combout\);
+
+-- Location: FF_X13_Y22_N13
+\HVAC_Sim|counter:cnt[1]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk_in~inputclkctrl_outclk\,
+	d => \HVAC_Sim|counter:cnt[1]~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \HVAC_Sim|counter:cnt[1]~q\);
+
+-- Location: LCCOMB_X13_Y22_N20
+\HVAC_Sim|Add0~4\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \HVAC_Sim|Add0~4_combout\ = ((\HVAC_Sim|counter:cnt[2]~q\ $ (\HVAC_Sim|counter~1_combout\ $ (\HVAC_Sim|Add0~3\)))) # (GND)
+-- \HVAC_Sim|Add0~5\ = CARRY((\HVAC_Sim|counter:cnt[2]~q\ & ((!\HVAC_Sim|Add0~3\) # (!\HVAC_Sim|counter~1_combout\))) # (!\HVAC_Sim|counter:cnt[2]~q\ & (!\HVAC_Sim|counter~1_combout\ & !\HVAC_Sim|Add0~3\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1001011000101011",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => \HVAC_Sim|counter:cnt[2]~q\,
+	datab => \HVAC_Sim|counter~1_combout\,
+	datad => VCC,
+	cin => \HVAC_Sim|Add0~3\,
+	combout => \HVAC_Sim|Add0~4_combout\,
+	cout => \HVAC_Sim|Add0~5\);
+
+-- Location: FF_X13_Y22_N21
+\HVAC_Sim|counter:cnt[2]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk_in~inputclkctrl_outclk\,
+	d => \HVAC_Sim|Add0~4_combout\,
+	ena => \HVAC_Sim|counter:cnt[0]~2_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \HVAC_Sim|counter:cnt[2]~q\);
+
+-- Location: LCCOMB_X13_Y22_N8
+\Comparator|ALTB~2\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \Comparator|ALTB~2_combout\ = (\Target_Temp|temp_out[2]~1_combout\ & (\HVAC_Sim|counter:cnt[2]~q\ & (\Target_Temp|temp_out[3]~0_combout\ $ (!\HVAC_Sim|counter:cnt[3]~q\)))) # (!\Target_Temp|temp_out[2]~1_combout\ & (!\HVAC_Sim|counter:cnt[2]~q\ & 
+-- (\Target_Temp|temp_out[3]~0_combout\ $ (!\HVAC_Sim|counter:cnt[3]~q\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000001001000001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Target_Temp|temp_out[2]~1_combout\,
+	datab => \Target_Temp|temp_out[3]~0_combout\,
+	datac => \HVAC_Sim|counter:cnt[3]~q\,
+	datad => \HVAC_Sim|counter:cnt[2]~q\,
+	combout => \Comparator|ALTB~2_combout\);
+
+-- Location: LCCOMB_X13_Y22_N14
+\HVAC_Sim|counter~0\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \HVAC_Sim|counter~0_combout\ = (((!\HVAC_Sim|counter:cnt[2]~q\) # (!\HVAC_Sim|counter:cnt[0]~q\)) # (!\HVAC_Sim|counter:cnt[3]~q\)) # (!\HVAC_Sim|counter:cnt[1]~q\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0111111111111111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \HVAC_Sim|counter:cnt[1]~q\,
+	datab => \HVAC_Sim|counter:cnt[3]~q\,
+	datac => \HVAC_Sim|counter:cnt[0]~q\,
+	datad => \HVAC_Sim|counter:cnt[2]~q\,
+	combout => \HVAC_Sim|counter~0_combout\);
+
+-- Location: LCCOMB_X13_Y22_N2
+\Comparator|ALTB~1\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \Comparator|ALTB~1_combout\ = (\HVAC_Sim|counter:cnt[1]~q\ & (\Target_Temp|temp_out[0]~3_combout\ & (\Target_Temp|temp_out[1]~2_combout\ & !\HVAC_Sim|counter:cnt[0]~q\))) # (!\HVAC_Sim|counter:cnt[1]~q\ & ((\Target_Temp|temp_out[1]~2_combout\) # 
+-- ((\Target_Temp|temp_out[0]~3_combout\ & !\HVAC_Sim|counter:cnt[0]~q\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101000011010100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \HVAC_Sim|counter:cnt[1]~q\,
+	datab => \Target_Temp|temp_out[0]~3_combout\,
+	datac => \Target_Temp|temp_out[1]~2_combout\,
+	datad => \HVAC_Sim|counter:cnt[0]~q\,
+	combout => \Comparator|ALTB~1_combout\);
+
+-- Location: LCCOMB_X13_Y22_N0
+\HVAC_Sim|counter~1\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \HVAC_Sim|counter~1_combout\ = (\HVAC_Sim|counter~0_combout\ & ((\Comparator|ALTB~0_combout\) # ((\Comparator|ALTB~2_combout\ & \Comparator|ALTB~1_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1110000011000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Comparator|ALTB~2_combout\,
+	datab => \Comparator|ALTB~0_combout\,
+	datac => \HVAC_Sim|counter~0_combout\,
+	datad => \Comparator|ALTB~1_combout\,
+	combout => \HVAC_Sim|counter~1_combout\);
+
+-- Location: LCCOMB_X13_Y22_N22
+\HVAC_Sim|Add0~6\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \HVAC_Sim|Add0~6_combout\ = \HVAC_Sim|counter:cnt[3]~q\ $ (\HVAC_Sim|Add0~5\ $ (!\HVAC_Sim|counter~1_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011110011000011",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => \HVAC_Sim|counter:cnt[3]~q\,
+	datad => \HVAC_Sim|counter~1_combout\,
+	cin => \HVAC_Sim|Add0~5\,
+	combout => \HVAC_Sim|Add0~6_combout\);
+
+-- Location: FF_X13_Y22_N23
+\HVAC_Sim|counter:cnt[3]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \clk_in~inputclkctrl_outclk\,
+	d => \HVAC_Sim|Add0~6_combout\,
+	ena => \HVAC_Sim|counter:cnt[0]~2_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \HVAC_Sim|counter:cnt[3]~q\);
+
+-- Location: LCCOMB_X13_Y22_N4
+\Comparator|ALTB~0\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \Comparator|ALTB~0_combout\ = (\Target_Temp|temp_out[3]~0_combout\ & (((\Target_Temp|temp_out[2]~1_combout\ & !\HVAC_Sim|counter:cnt[2]~q\)) # (!\HVAC_Sim|counter:cnt[3]~q\))) # (!\Target_Temp|temp_out[3]~0_combout\ & (\Target_Temp|temp_out[2]~1_combout\ 
+-- & (!\HVAC_Sim|counter:cnt[3]~q\ & !\HVAC_Sim|counter:cnt[2]~q\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000110010001110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Target_Temp|temp_out[2]~1_combout\,
+	datab => \Target_Temp|temp_out[3]~0_combout\,
+	datac => \HVAC_Sim|counter:cnt[3]~q\,
+	datad => \HVAC_Sim|counter:cnt[2]~q\,
+	combout => \Comparator|ALTB~0_combout\);
+
+-- Location: LCCOMB_X12_Y22_N0
+\Comparator|ALTB~3\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \Comparator|ALTB~3_combout\ = (\Comparator|ALTB~0_combout\) # ((\Comparator|ALTB~2_combout\ & \Comparator|ALTB~1_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111101010101010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Comparator|ALTB~0_combout\,
+	datac => \Comparator|ALTB~2_combout\,
+	datad => \Comparator|ALTB~1_combout\,
+	combout => \Comparator|ALTB~3_combout\);
+
+-- Location: LCCOMB_X12_Y22_N2
+\Comparator|AGTB~2\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \Comparator|AGTB~2_combout\ = (\Comparator|AGTB~0_combout\) # ((\Comparator|ALTB~2_combout\ & \Comparator|AGTB~1_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111101010101010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Comparator|AGTB~0_combout\,
+	datac => \Comparator|ALTB~2_combout\,
+	datad => \Comparator|AGTB~1_combout\,
+	combout => \Comparator|AGTB~2_combout\);
+
+-- Location: LCCOMB_X15_Y22_N30
+\Control_Energy|BLOWER\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \Control_Energy|BLOWER~combout\ = (\pb[1]~input_o\) # (((\pb[2]~input_o\) # (\pb[0]~input_o\)) # (!\Comparator|AEQB~0_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111111111011",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \pb[1]~input_o\,
+	datab => \Comparator|AEQB~0_combout\,
+	datac => \pb[2]~input_o\,
+	datad => \pb[0]~input_o\,
+	combout => \Control_Energy|BLOWER~combout\);
+
+-- Location: LCCOMB_X14_Y22_N14
+\Tester1|TEST_PASS~3\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \Tester1|TEST_PASS~3_combout\ = (\HVAC_Sim|counter:cnt[1]~q\ & (((!\sw[0]~input_o\ & \HVAC_Sim|counter:cnt[0]~q\)) # (!\sw[1]~input_o\))) # (!\HVAC_Sim|counter:cnt[1]~q\ & (!\sw[0]~input_o\ & (\HVAC_Sim|counter:cnt[0]~q\ & !\sw[1]~input_o\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0100000011110100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \sw[0]~input_o\,
+	datab => \HVAC_Sim|counter:cnt[0]~q\,
+	datac => \HVAC_Sim|counter:cnt[1]~q\,
+	datad => \sw[1]~input_o\,
+	combout => \Tester1|TEST_PASS~3_combout\);
+
+-- Location: LCCOMB_X14_Y22_N12
+\Tester1|TEST_PASS~4\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \Tester1|TEST_PASS~4_combout\ = (\HVAC_Sim|counter:cnt[2]~q\ & ((\Tester1|TEST_PASS~3_combout\) # (!\sw[2]~input_o\))) # (!\HVAC_Sim|counter:cnt[2]~q\ & (\Tester1|TEST_PASS~3_combout\ & !\sw[2]~input_o\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100000011111100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \HVAC_Sim|counter:cnt[2]~q\,
+	datac => \Tester1|TEST_PASS~3_combout\,
+	datad => \sw[2]~input_o\,
+	combout => \Tester1|TEST_PASS~4_combout\);
+
+-- Location: LCCOMB_X14_Y22_N18
+\Tester1|TEST_PASS~5\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \Tester1|TEST_PASS~5_combout\ = (\Comparator|ALTB~3_combout\ & ((\Tester1|TEST_PASS~4_combout\ & ((\HVAC_Sim|counter:cnt[3]~q\) # (!\sw[3]~input_o\))) # (!\Tester1|TEST_PASS~4_combout\ & (\HVAC_Sim|counter:cnt[3]~q\ & !\sw[3]~input_o\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000111000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Tester1|TEST_PASS~4_combout\,
+	datab => \HVAC_Sim|counter:cnt[3]~q\,
+	datac => \sw[3]~input_o\,
+	datad => \Comparator|ALTB~3_combout\,
+	combout => \Tester1|TEST_PASS~5_combout\);
+
+-- Location: LCCOMB_X14_Y22_N2
+\Tester1|TEST_PASS~7\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \Tester1|TEST_PASS~7_combout\ = (\sw[0]~input_o\ & (\HVAC_Sim|counter:cnt[0]~q\ & (\sw[3]~input_o\ $ (!\HVAC_Sim|counter:cnt[3]~q\)))) # (!\sw[0]~input_o\ & (!\HVAC_Sim|counter:cnt[0]~q\ & (\sw[3]~input_o\ $ (!\HVAC_Sim|counter:cnt[3]~q\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1001000000001001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \sw[0]~input_o\,
+	datab => \HVAC_Sim|counter:cnt[0]~q\,
+	datac => \sw[3]~input_o\,
+	datad => \HVAC_Sim|counter:cnt[3]~q\,
+	combout => \Tester1|TEST_PASS~7_combout\);
+
+-- Location: LCCOMB_X14_Y22_N16
+\Tester1|TEST_PASS~6\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \Tester1|TEST_PASS~6_combout\ = (\HVAC_Sim|counter:cnt[1]~q\ & (\sw[1]~input_o\ & (\HVAC_Sim|counter:cnt[2]~q\ $ (!\sw[2]~input_o\)))) # (!\HVAC_Sim|counter:cnt[1]~q\ & (!\sw[1]~input_o\ & (\HVAC_Sim|counter:cnt[2]~q\ $ (!\sw[2]~input_o\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000010000100001",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \HVAC_Sim|counter:cnt[1]~q\,
+	datab => \HVAC_Sim|counter:cnt[2]~q\,
+	datac => \sw[1]~input_o\,
+	datad => \sw[2]~input_o\,
+	combout => \Tester1|TEST_PASS~6_combout\);
+
+-- Location: LCCOMB_X14_Y22_N24
+\Tester1|TEST_PASS~8\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \Tester1|TEST_PASS~8_combout\ = (!\Comparator|AEQB~0_combout\ & (\Tester1|TEST_PASS~7_combout\ & \Tester1|TEST_PASS~6_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0100010000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Comparator|AEQB~0_combout\,
+	datab => \Tester1|TEST_PASS~7_combout\,
+	datad => \Tester1|TEST_PASS~6_combout\,
+	combout => \Tester1|TEST_PASS~8_combout\);
+
+-- Location: LCCOMB_X14_Y22_N4
+\Tester1|TEST_PASS~0\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \Tester1|TEST_PASS~0_combout\ = (\HVAC_Sim|counter:cnt[1]~q\ & (\sw[0]~input_o\ & (!\HVAC_Sim|counter:cnt[0]~q\ & \sw[1]~input_o\))) # (!\HVAC_Sim|counter:cnt[1]~q\ & ((\sw[1]~input_o\) # ((\sw[0]~input_o\ & !\HVAC_Sim|counter:cnt[0]~q\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010111100000010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \sw[0]~input_o\,
+	datab => \HVAC_Sim|counter:cnt[0]~q\,
+	datac => \HVAC_Sim|counter:cnt[1]~q\,
+	datad => \sw[1]~input_o\,
+	combout => \Tester1|TEST_PASS~0_combout\);
+
+-- Location: LCCOMB_X14_Y22_N22
+\Tester1|TEST_PASS~1\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \Tester1|TEST_PASS~1_combout\ = (\HVAC_Sim|counter:cnt[2]~q\ & (\Tester1|TEST_PASS~0_combout\ & \sw[2]~input_o\)) # (!\HVAC_Sim|counter:cnt[2]~q\ & ((\Tester1|TEST_PASS~0_combout\) # (\sw[2]~input_o\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111001100110000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \HVAC_Sim|counter:cnt[2]~q\,
+	datac => \Tester1|TEST_PASS~0_combout\,
+	datad => \sw[2]~input_o\,
+	combout => \Tester1|TEST_PASS~1_combout\);
+
+-- Location: LCCOMB_X14_Y22_N20
+\Tester1|TEST_PASS~2\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \Tester1|TEST_PASS~2_combout\ = (\Comparator|AGTB~2_combout\ & ((\Tester1|TEST_PASS~1_combout\ & ((\sw[3]~input_o\) # (!\HVAC_Sim|counter:cnt[3]~q\))) # (!\Tester1|TEST_PASS~1_combout\ & (\sw[3]~input_o\ & !\HVAC_Sim|counter:cnt[3]~q\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1000000011001000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Tester1|TEST_PASS~1_combout\,
+	datab => \Comparator|AGTB~2_combout\,
+	datac => \sw[3]~input_o\,
+	datad => \HVAC_Sim|counter:cnt[3]~q\,
+	combout => \Tester1|TEST_PASS~2_combout\);
+
+-- Location: LCCOMB_X14_Y22_N6
+\Tester1|TEST_PASS~9\ : fiftyfivenm_lcell_comb
+-- Equation(s):
+-- \Tester1|TEST_PASS~9_combout\ = (\pb[2]~input_o\ & ((\Tester1|TEST_PASS~5_combout\) # ((\Tester1|TEST_PASS~8_combout\) # (\Tester1|TEST_PASS~2_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Tester1|TEST_PASS~5_combout\,
+	datab => \Tester1|TEST_PASS~8_combout\,
+	datac => \Tester1|TEST_PASS~2_combout\,
+	datad => \pb[2]~input_o\,
+	combout => \Tester1|TEST_PASS~9_combout\);
 
 -- Location: UNVM_X0_Y11_N40
 \~QUARTUS_CREATED_UNVM~\ : fiftyfivenm_unvm
