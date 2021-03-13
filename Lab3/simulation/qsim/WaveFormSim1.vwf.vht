@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "03/12/2021 19:09:49"
+-- Generated on "03/12/2021 19:04:45"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          LogicalStep_Lab3_top
 -- 
@@ -61,9 +61,9 @@ t_prcs_clk_in: PROCESS
 BEGIN
 LOOP
 	clk_in <= '0';
-	WAIT FOR 25000 ps;
+	WAIT FOR 5000 ps;
 	clk_in <= '1';
-	WAIT FOR 25000 ps;
+	WAIT FOR 5000 ps;
 	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
 END LOOP;
 END PROCESS t_prcs_clk_in;
@@ -72,12 +72,16 @@ END PROCESS t_prcs_clk_in;
 t_prcs_sw_3: PROCESS
 BEGIN
 	sw(3) <= '1';
+	WAIT FOR 250000 ps;
+	sw(3) <= '0';
 WAIT;
 END PROCESS t_prcs_sw_3;
 
 -- sw[2]
 t_prcs_sw_2: PROCESS
 BEGIN
+	sw(2) <= '1';
+	WAIT FOR 250000 ps;
 	sw(2) <= '0';
 WAIT;
 END PROCESS t_prcs_sw_2;
@@ -85,7 +89,11 @@ END PROCESS t_prcs_sw_2;
 -- sw[1]
 t_prcs_sw_1: PROCESS
 BEGIN
+	sw(1) <= '0';
+	WAIT FOR 250000 ps;
 	sw(1) <= '1';
+	WAIT FOR 250000 ps;
+	sw(1) <= '0';
 WAIT;
 END PROCESS t_prcs_sw_1;
 
@@ -99,7 +107,11 @@ END PROCESS t_prcs_sw_0;
 -- sw[7]
 t_prcs_sw_7: PROCESS
 BEGIN
+	sw(7) <= '0';
+	WAIT FOR 500000 ps;
 	sw(7) <= '1';
+	WAIT FOR 250000 ps;
+	sw(7) <= '0';
 WAIT;
 END PROCESS t_prcs_sw_7;
 
@@ -107,12 +119,18 @@ END PROCESS t_prcs_sw_7;
 t_prcs_sw_6: PROCESS
 BEGIN
 	sw(6) <= '0';
+	WAIT FOR 500000 ps;
+	sw(6) <= '1';
 WAIT;
 END PROCESS t_prcs_sw_6;
 
 -- sw[5]
 t_prcs_sw_5: PROCESS
 BEGIN
+	sw(5) <= '0';
+	WAIT FOR 500000 ps;
+	sw(5) <= '1';
+	WAIT FOR 250000 ps;
 	sw(5) <= '0';
 WAIT;
 END PROCESS t_prcs_sw_5;
@@ -121,31 +139,39 @@ END PROCESS t_prcs_sw_5;
 t_prcs_sw_4: PROCESS
 BEGIN
 	sw(4) <= '0';
+	WAIT FOR 500000 ps;
+	sw(4) <= '1';
+	WAIT FOR 250000 ps;
+	sw(4) <= '0';
 WAIT;
 END PROCESS t_prcs_sw_4;
+
 -- pb[3]
 t_prcs_pb_3: PROCESS
 BEGIN
+LOOP
+	pb(3) <= '0';
+	WAIT FOR 500000 ps;
 	pb(3) <= '1';
-WAIT;
+	WAIT FOR 500000 ps;
+	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
+END LOOP;
 END PROCESS t_prcs_pb_3;
+
 -- pb[2]
 t_prcs_pb_2: PROCESS
 BEGIN
-LOOP
 	pb(2) <= '0';
-	WAIT FOR 250000 ps;
-	pb(2) <= '1';
-	WAIT FOR 250000 ps;
-	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
-END LOOP;
+WAIT;
 END PROCESS t_prcs_pb_2;
+
 -- pb[1]
 t_prcs_pb_1: PROCESS
 BEGIN
 	pb(1) <= '0';
 WAIT;
 END PROCESS t_prcs_pb_1;
+
 -- pb[0]
 t_prcs_pb_0: PROCESS
 BEGIN

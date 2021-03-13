@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition"
 
-// DATE "03/12/2021 12:47:30"
+// DATE "03/12/2021 19:43:23"
 
 // 
 // Device: Altera 10M08DAF484C8G Package FBGA484
@@ -93,42 +93,42 @@ wire \leds[8]~output_o ;
 wire \leds[9]~output_o ;
 wire \leds[10]~output_o ;
 wire \leds[11]~output_o ;
+wire \sw[3]~input_o ;
 wire \pb[3]~input_o ;
+wire \sw[7]~input_o ;
+wire \Target_Temp|temp_out[3]~0_combout ;
 wire \sw[6]~input_o ;
 wire \sw[2]~input_o ;
 wire \Target_Temp|temp_out[2]~1_combout ;
-wire \sw[3]~input_o ;
-wire \sw[7]~input_o ;
-wire \Target_Temp|temp_out[3]~0_combout ;
 wire \clk_in~input_o ;
 wire \clk_in~inputclkctrl_outclk ;
-wire \pb[1]~input_o ;
 wire \pb[2]~input_o ;
+wire \pb[1]~input_o ;
 wire \pb[0]~input_o ;
 wire \Control_Energy|BLOWER~2_combout ;
-wire \Comparator|AGTB~0_combout ;
+wire \HVAC_Sim|Add0~1_cout ;
+wire \HVAC_Sim|Add0~2_combout ;
+wire \HVAC_Sim|counter:cnt[1]~0_combout ;
+wire \HVAC_Sim|counter:cnt[1]~q ;
 wire \sw[1]~input_o ;
 wire \sw[5]~input_o ;
 wire \Target_Temp|temp_out[1]~2_combout ;
 wire \sw[0]~input_o ;
 wire \sw[4]~input_o ;
-wire \Target_Temp|temp_out[0]~3_combout ;
-wire \HVAC_Sim|counter:cnt[0]~3_combout ;
-wire \HVAC_Sim|counter:cnt[0]~q ;
-wire \Comparator|AGTB~1_combout ;
-wire \HVAC_Sim|counter:cnt[0]~0_combout ;
-wire \HVAC_Sim|counter:cnt[0]~1_combout ;
 wire \Comparator|comp0|AEQB~0_combout ;
-wire \Comparator|AEQB~0_combout ;
-wire \HVAC_Sim|counter:cnt[0]~2_combout ;
-wire \HVAC_Sim|Add0~1_cout ;
-wire \HVAC_Sim|Add0~2_combout ;
-wire \HVAC_Sim|counter:cnt[1]~0_combout ;
-wire \HVAC_Sim|counter:cnt[1]~q ;
 wire \HVAC_Sim|Add0~3 ;
 wire \HVAC_Sim|Add0~4_combout ;
 wire \HVAC_Sim|counter:cnt[2]~q ;
 wire \Comparator|ALTB~2_combout ;
+wire \Comparator|AEQB~0_combout ;
+wire \Target_Temp|temp_out[0]~3_combout ;
+wire \Comparator|AGTB~1_combout ;
+wire \Comparator|AGTB~0_combout ;
+wire \HVAC_Sim|counter:cnt[0]~0_combout ;
+wire \HVAC_Sim|counter:cnt[0]~1_combout ;
+wire \HVAC_Sim|counter:cnt[0]~2_combout ;
+wire \HVAC_Sim|counter:cnt[0]~3_combout ;
+wire \HVAC_Sim|counter:cnt[0]~q ;
 wire \HVAC_Sim|counter~0_combout ;
 wire \Comparator|ALTB~1_combout ;
 wire \HVAC_Sim|counter~1_combout ;
@@ -139,16 +139,16 @@ wire \Comparator|ALTB~0_combout ;
 wire \Comparator|ALTB~3_combout ;
 wire \Comparator|AGTB~2_combout ;
 wire \Control_Energy|BLOWER~combout ;
-wire \Tester1|TEST_PASS~3_combout ;
-wire \Tester1|TEST_PASS~4_combout ;
-wire \Tester1|TEST_PASS~5_combout ;
-wire \Tester1|TEST_PASS~7_combout ;
-wire \Tester1|TEST_PASS~6_combout ;
-wire \Tester1|TEST_PASS~8_combout ;
-wire \Tester1|TEST_PASS~0_combout ;
-wire \Tester1|TEST_PASS~1_combout ;
-wire \Tester1|TEST_PASS~2_combout ;
-wire \Tester1|TEST_PASS~9_combout ;
+wire \leds~3_combout ;
+wire \leds~4_combout ;
+wire \leds~5_combout ;
+wire \leds~6_combout ;
+wire \leds~7_combout ;
+wire \leds~8_combout ;
+wire \leds~0_combout ;
+wire \leds~1_combout ;
+wire \leds~2_combout ;
+wire \leds~9_combout ;
 
 
 hard_block auto_generated_inst(
@@ -253,7 +253,7 @@ defparam \leds[5]~output .open_drain_output = "false";
 
 // Location: IOOBUF_X13_Y25_N9
 fiftyfivenm_io_obuf \leds[6]~output (
-	.i(\Tester1|TEST_PASS~9_combout ),
+	.i(\leds~9_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -329,6 +329,18 @@ defparam \leds[11]~output .bus_hold = "false";
 defparam \leds[11]~output .open_drain_output = "false";
 // synopsys translate_on
 
+// Location: IOIBUF_X15_Y25_N1
+fiftyfivenm_io_ibuf \sw[3]~input (
+	.i(sw[3]),
+	.ibar(gnd),
+	.nsleep(vcc),
+	.o(\sw[3]~input_o ));
+// synopsys translate_off
+defparam \sw[3]~input .bus_hold = "false";
+defparam \sw[3]~input .listen_to_nsleep_signal = "false";
+defparam \sw[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
 // Location: IOIBUF_X10_Y21_N15
 fiftyfivenm_io_ibuf \pb[3]~input (
 	.i(pb[3]),
@@ -339,6 +351,35 @@ fiftyfivenm_io_ibuf \pb[3]~input (
 defparam \pb[3]~input .bus_hold = "false";
 defparam \pb[3]~input .listen_to_nsleep_signal = "false";
 defparam \pb[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X17_Y25_N1
+fiftyfivenm_io_ibuf \sw[7]~input (
+	.i(sw[7]),
+	.ibar(gnd),
+	.nsleep(vcc),
+	.o(\sw[7]~input_o ));
+// synopsys translate_off
+defparam \sw[7]~input .bus_hold = "false";
+defparam \sw[7]~input .listen_to_nsleep_signal = "false";
+defparam \sw[7]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X14_Y22_N20
+fiftyfivenm_lcell_comb \Target_Temp|temp_out[3]~0 (
+// Equation(s):
+// \Target_Temp|temp_out[3]~0_combout  = (\pb[3]~input_o  & ((\sw[7]~input_o ))) # (!\pb[3]~input_o  & (\sw[3]~input_o ))
+
+	.dataa(gnd),
+	.datab(\sw[3]~input_o ),
+	.datac(\pb[3]~input_o ),
+	.datad(\sw[7]~input_o ),
+	.cin(gnd),
+	.combout(\Target_Temp|temp_out[3]~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Target_Temp|temp_out[3]~0 .lut_mask = 16'hFC0C;
+defparam \Target_Temp|temp_out[3]~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: IOIBUF_X10_Y21_N1
@@ -365,7 +406,7 @@ defparam \sw[2]~input .listen_to_nsleep_signal = "false";
 defparam \sw[2]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X14_Y22_N30
+// Location: LCCOMB_X14_Y22_N22
 fiftyfivenm_lcell_comb \Target_Temp|temp_out[2]~1 (
 // Equation(s):
 // \Target_Temp|temp_out[2]~1_combout  = (\pb[3]~input_o  & (\sw[6]~input_o )) # (!\pb[3]~input_o  & ((\sw[2]~input_o )))
@@ -380,47 +421,6 @@ fiftyfivenm_lcell_comb \Target_Temp|temp_out[2]~1 (
 // synopsys translate_off
 defparam \Target_Temp|temp_out[2]~1 .lut_mask = 16'hF3C0;
 defparam \Target_Temp|temp_out[2]~1 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: IOIBUF_X15_Y25_N1
-fiftyfivenm_io_ibuf \sw[3]~input (
-	.i(sw[3]),
-	.ibar(gnd),
-	.nsleep(vcc),
-	.o(\sw[3]~input_o ));
-// synopsys translate_off
-defparam \sw[3]~input .bus_hold = "false";
-defparam \sw[3]~input .listen_to_nsleep_signal = "false";
-defparam \sw[3]~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: IOIBUF_X17_Y25_N1
-fiftyfivenm_io_ibuf \sw[7]~input (
-	.i(sw[7]),
-	.ibar(gnd),
-	.nsleep(vcc),
-	.o(\sw[7]~input_o ));
-// synopsys translate_off
-defparam \sw[7]~input .bus_hold = "false";
-defparam \sw[7]~input .listen_to_nsleep_signal = "false";
-defparam \sw[7]~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: LCCOMB_X14_Y22_N28
-fiftyfivenm_lcell_comb \Target_Temp|temp_out[3]~0 (
-// Equation(s):
-// \Target_Temp|temp_out[3]~0_combout  = (\pb[3]~input_o  & ((\sw[7]~input_o ))) # (!\pb[3]~input_o  & (\sw[3]~input_o ))
-
-	.dataa(gnd),
-	.datab(\sw[3]~input_o ),
-	.datac(\pb[3]~input_o ),
-	.datad(\sw[7]~input_o ),
-	.cin(gnd),
-	.combout(\Target_Temp|temp_out[3]~0_combout ),
-	.cout());
-// synopsys translate_off
-defparam \Target_Temp|temp_out[3]~0 .lut_mask = 16'hFC0C;
-defparam \Target_Temp|temp_out[3]~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: IOIBUF_X0_Y6_N15
@@ -448,18 +448,6 @@ defparam \clk_in~inputclkctrl .clock_type = "global clock";
 defparam \clk_in~inputclkctrl .ena_register_mode = "none";
 // synopsys translate_on
 
-// Location: IOIBUF_X15_Y25_N29
-fiftyfivenm_io_ibuf \pb[1]~input (
-	.i(pb[1]),
-	.ibar(gnd),
-	.nsleep(vcc),
-	.o(\pb[1]~input_o ));
-// synopsys translate_off
-defparam \pb[1]~input .bus_hold = "false";
-defparam \pb[1]~input .listen_to_nsleep_signal = "false";
-defparam \pb[1]~input .simulate_z_as = "z";
-// synopsys translate_on
-
 // Location: IOIBUF_X15_Y25_N8
 fiftyfivenm_io_ibuf \pb[2]~input (
 	.i(pb[2]),
@@ -470,6 +458,18 @@ fiftyfivenm_io_ibuf \pb[2]~input (
 defparam \pb[2]~input .bus_hold = "false";
 defparam \pb[2]~input .listen_to_nsleep_signal = "false";
 defparam \pb[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X15_Y25_N29
+fiftyfivenm_io_ibuf \pb[1]~input (
+	.i(pb[1]),
+	.ibar(gnd),
+	.nsleep(vcc),
+	.o(\pb[1]~input_o ));
+// synopsys translate_off
+defparam \pb[1]~input .bus_hold = "false";
+defparam \pb[1]~input .listen_to_nsleep_signal = "false";
+defparam \pb[1]~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: IOIBUF_X17_Y25_N15
@@ -487,36 +487,90 @@ defparam \pb[0]~input .simulate_z_as = "z";
 // Location: LCCOMB_X15_Y22_N28
 fiftyfivenm_lcell_comb \Control_Energy|BLOWER~2 (
 // Equation(s):
-// \Control_Energy|BLOWER~2_combout  = (\pb[1]~input_o ) # ((\pb[2]~input_o ) # (\pb[0]~input_o ))
+// \Control_Energy|BLOWER~2_combout  = (\pb[2]~input_o ) # ((\pb[1]~input_o ) # (\pb[0]~input_o ))
 
-	.dataa(\pb[1]~input_o ),
-	.datab(gnd),
-	.datac(\pb[2]~input_o ),
+	.dataa(gnd),
+	.datab(\pb[2]~input_o ),
+	.datac(\pb[1]~input_o ),
 	.datad(\pb[0]~input_o ),
 	.cin(gnd),
 	.combout(\Control_Energy|BLOWER~2_combout ),
 	.cout());
 // synopsys translate_off
-defparam \Control_Energy|BLOWER~2 .lut_mask = 16'hFFFA;
+defparam \Control_Energy|BLOWER~2 .lut_mask = 16'hFFFC;
 defparam \Control_Energy|BLOWER~2 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X13_Y22_N30
-fiftyfivenm_lcell_comb \Comparator|AGTB~0 (
+// Location: LCCOMB_X13_Y22_N16
+fiftyfivenm_lcell_comb \HVAC_Sim|Add0~1 (
 // Equation(s):
-// \Comparator|AGTB~0_combout  = (\Target_Temp|temp_out[3]~0_combout  & (!\Target_Temp|temp_out[2]~1_combout  & (\HVAC_Sim|counter:cnt[3]~q  & \HVAC_Sim|counter:cnt[2]~q ))) # (!\Target_Temp|temp_out[3]~0_combout  & ((\HVAC_Sim|counter:cnt[3]~q ) # 
-// ((!\Target_Temp|temp_out[2]~1_combout  & \HVAC_Sim|counter:cnt[2]~q ))))
+// \HVAC_Sim|Add0~1_cout  = CARRY(\HVAC_Sim|counter:cnt[0]~q )
 
-	.dataa(\Target_Temp|temp_out[2]~1_combout ),
-	.datab(\Target_Temp|temp_out[3]~0_combout ),
-	.datac(\HVAC_Sim|counter:cnt[3]~q ),
-	.datad(\HVAC_Sim|counter:cnt[2]~q ),
+	.dataa(gnd),
+	.datab(\HVAC_Sim|counter:cnt[0]~q ),
+	.datac(gnd),
+	.datad(vcc),
 	.cin(gnd),
-	.combout(\Comparator|AGTB~0_combout ),
+	.combout(),
+	.cout(\HVAC_Sim|Add0~1_cout ));
+// synopsys translate_off
+defparam \HVAC_Sim|Add0~1 .lut_mask = 16'h00CC;
+defparam \HVAC_Sim|Add0~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X13_Y22_N18
+fiftyfivenm_lcell_comb \HVAC_Sim|Add0~2 (
+// Equation(s):
+// \HVAC_Sim|Add0~2_combout  = (\HVAC_Sim|counter:cnt[1]~q  & ((\HVAC_Sim|counter~1_combout  & (!\HVAC_Sim|Add0~1_cout )) # (!\HVAC_Sim|counter~1_combout  & (\HVAC_Sim|Add0~1_cout  & VCC)))) # (!\HVAC_Sim|counter:cnt[1]~q  & ((\HVAC_Sim|counter~1_combout  & 
+// ((\HVAC_Sim|Add0~1_cout ) # (GND))) # (!\HVAC_Sim|counter~1_combout  & (!\HVAC_Sim|Add0~1_cout ))))
+// \HVAC_Sim|Add0~3  = CARRY((\HVAC_Sim|counter:cnt[1]~q  & (\HVAC_Sim|counter~1_combout  & !\HVAC_Sim|Add0~1_cout )) # (!\HVAC_Sim|counter:cnt[1]~q  & ((\HVAC_Sim|counter~1_combout ) # (!\HVAC_Sim|Add0~1_cout ))))
+
+	.dataa(\HVAC_Sim|counter:cnt[1]~q ),
+	.datab(\HVAC_Sim|counter~1_combout ),
+	.datac(gnd),
+	.datad(vcc),
+	.cin(\HVAC_Sim|Add0~1_cout ),
+	.combout(\HVAC_Sim|Add0~2_combout ),
+	.cout(\HVAC_Sim|Add0~3 ));
+// synopsys translate_off
+defparam \HVAC_Sim|Add0~2 .lut_mask = 16'h694D;
+defparam \HVAC_Sim|Add0~2 .sum_lutc_input = "cin";
+// synopsys translate_on
+
+// Location: LCCOMB_X13_Y22_N0
+fiftyfivenm_lcell_comb \HVAC_Sim|counter:cnt[1]~0 (
+// Equation(s):
+// \HVAC_Sim|counter:cnt[1]~0_combout  = (\HVAC_Sim|counter:cnt[0]~2_combout  & ((\HVAC_Sim|Add0~2_combout ))) # (!\HVAC_Sim|counter:cnt[0]~2_combout  & (\HVAC_Sim|counter:cnt[1]~q ))
+
+	.dataa(gnd),
+	.datab(\HVAC_Sim|counter:cnt[0]~2_combout ),
+	.datac(\HVAC_Sim|counter:cnt[1]~q ),
+	.datad(\HVAC_Sim|Add0~2_combout ),
+	.cin(gnd),
+	.combout(\HVAC_Sim|counter:cnt[1]~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \Comparator|AGTB~0 .lut_mask = 16'h7130;
-defparam \Comparator|AGTB~0 .sum_lutc_input = "datac";
+defparam \HVAC_Sim|counter:cnt[1]~0 .lut_mask = 16'hFC30;
+defparam \HVAC_Sim|counter:cnt[1]~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X13_Y22_N1
+dffeas \HVAC_Sim|counter:cnt[1] (
+	.clk(\clk_in~inputclkctrl_outclk ),
+	.d(\HVAC_Sim|counter:cnt[1]~0_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\HVAC_Sim|counter:cnt[1]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \HVAC_Sim|counter:cnt[1] .is_wysiwyg = "true";
+defparam \HVAC_Sim|counter:cnt[1] .power_up = "low";
 // synopsys translate_on
 
 // Location: IOIBUF_X13_Y25_N15
@@ -584,111 +638,6 @@ defparam \sw[4]~input .listen_to_nsleep_signal = "false";
 defparam \sw[4]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X14_Y22_N26
-fiftyfivenm_lcell_comb \Target_Temp|temp_out[0]~3 (
-// Equation(s):
-// \Target_Temp|temp_out[0]~3_combout  = (\pb[3]~input_o  & ((\sw[4]~input_o ))) # (!\pb[3]~input_o  & (\sw[0]~input_o ))
-
-	.dataa(\sw[0]~input_o ),
-	.datab(\sw[4]~input_o ),
-	.datac(\pb[3]~input_o ),
-	.datad(gnd),
-	.cin(gnd),
-	.combout(\Target_Temp|temp_out[0]~3_combout ),
-	.cout());
-// synopsys translate_off
-defparam \Target_Temp|temp_out[0]~3 .lut_mask = 16'hCACA;
-defparam \Target_Temp|temp_out[0]~3 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X13_Y22_N10
-fiftyfivenm_lcell_comb \HVAC_Sim|counter:cnt[0]~3 (
-// Equation(s):
-// \HVAC_Sim|counter:cnt[0]~3_combout  = \HVAC_Sim|counter:cnt[0]~q  $ (\HVAC_Sim|counter:cnt[0]~2_combout )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(\HVAC_Sim|counter:cnt[0]~q ),
-	.datad(\HVAC_Sim|counter:cnt[0]~2_combout ),
-	.cin(gnd),
-	.combout(\HVAC_Sim|counter:cnt[0]~3_combout ),
-	.cout());
-// synopsys translate_off
-defparam \HVAC_Sim|counter:cnt[0]~3 .lut_mask = 16'h0FF0;
-defparam \HVAC_Sim|counter:cnt[0]~3 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: FF_X13_Y22_N11
-dffeas \HVAC_Sim|counter:cnt[0] (
-	.clk(\clk_in~inputclkctrl_outclk ),
-	.d(\HVAC_Sim|counter:cnt[0]~3_combout ),
-	.asdata(vcc),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\HVAC_Sim|counter:cnt[0]~q ),
-	.prn(vcc));
-// synopsys translate_off
-defparam \HVAC_Sim|counter:cnt[0] .is_wysiwyg = "true";
-defparam \HVAC_Sim|counter:cnt[0] .power_up = "low";
-// synopsys translate_on
-
-// Location: LCCOMB_X13_Y22_N28
-fiftyfivenm_lcell_comb \Comparator|AGTB~1 (
-// Equation(s):
-// \Comparator|AGTB~1_combout  = (\Target_Temp|temp_out[1]~2_combout  & (!\Target_Temp|temp_out[0]~3_combout  & (\HVAC_Sim|counter:cnt[0]~q  & \HVAC_Sim|counter:cnt[1]~q ))) # (!\Target_Temp|temp_out[1]~2_combout  & ((\HVAC_Sim|counter:cnt[1]~q ) # 
-// ((!\Target_Temp|temp_out[0]~3_combout  & \HVAC_Sim|counter:cnt[0]~q ))))
-
-	.dataa(\Target_Temp|temp_out[1]~2_combout ),
-	.datab(\Target_Temp|temp_out[0]~3_combout ),
-	.datac(\HVAC_Sim|counter:cnt[0]~q ),
-	.datad(\HVAC_Sim|counter:cnt[1]~q ),
-	.cin(gnd),
-	.combout(\Comparator|AGTB~1_combout ),
-	.cout());
-// synopsys translate_off
-defparam \Comparator|AGTB~1 .lut_mask = 16'h7510;
-defparam \Comparator|AGTB~1 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X13_Y22_N26
-fiftyfivenm_lcell_comb \HVAC_Sim|counter:cnt[0]~0 (
-// Equation(s):
-// \HVAC_Sim|counter:cnt[0]~0_combout  = (\HVAC_Sim|counter:cnt[1]~q ) # ((\HVAC_Sim|counter:cnt[2]~q ) # ((\HVAC_Sim|counter:cnt[0]~q ) # (\HVAC_Sim|counter:cnt[3]~q )))
-
-	.dataa(\HVAC_Sim|counter:cnt[1]~q ),
-	.datab(\HVAC_Sim|counter:cnt[2]~q ),
-	.datac(\HVAC_Sim|counter:cnt[0]~q ),
-	.datad(\HVAC_Sim|counter:cnt[3]~q ),
-	.cin(gnd),
-	.combout(\HVAC_Sim|counter:cnt[0]~0_combout ),
-	.cout());
-// synopsys translate_off
-defparam \HVAC_Sim|counter:cnt[0]~0 .lut_mask = 16'hFFFE;
-defparam \HVAC_Sim|counter:cnt[0]~0 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X13_Y22_N24
-fiftyfivenm_lcell_comb \HVAC_Sim|counter:cnt[0]~1 (
-// Equation(s):
-// \HVAC_Sim|counter:cnt[0]~1_combout  = (\HVAC_Sim|counter:cnt[0]~0_combout  & ((\Comparator|AGTB~0_combout ) # ((\Comparator|AGTB~1_combout  & \Comparator|ALTB~2_combout ))))
-
-	.dataa(\Comparator|AGTB~0_combout ),
-	.datab(\Comparator|AGTB~1_combout ),
-	.datac(\HVAC_Sim|counter:cnt[0]~0_combout ),
-	.datad(\Comparator|ALTB~2_combout ),
-	.cin(gnd),
-	.combout(\HVAC_Sim|counter:cnt[0]~1_combout ),
-	.cout());
-// synopsys translate_off
-defparam \HVAC_Sim|counter:cnt[0]~1 .lut_mask = 16'hE0A0;
-defparam \HVAC_Sim|counter:cnt[0]~1 .sum_lutc_input = "datac";
-// synopsys translate_on
-
 // Location: LCCOMB_X14_Y22_N8
 fiftyfivenm_lcell_comb \Comparator|comp0|AEQB~0 (
 // Equation(s):
@@ -704,112 +653,6 @@ fiftyfivenm_lcell_comb \Comparator|comp0|AEQB~0 (
 // synopsys translate_off
 defparam \Comparator|comp0|AEQB~0 .lut_mask = 16'h35CA;
 defparam \Comparator|comp0|AEQB~0 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X14_Y22_N10
-fiftyfivenm_lcell_comb \Comparator|AEQB~0 (
-// Equation(s):
-// \Comparator|AEQB~0_combout  = (\Comparator|comp0|AEQB~0_combout ) # ((\HVAC_Sim|counter:cnt[1]~q  $ (\Target_Temp|temp_out[1]~2_combout )) # (!\Comparator|ALTB~2_combout ))
-
-	.dataa(\HVAC_Sim|counter:cnt[1]~q ),
-	.datab(\Target_Temp|temp_out[1]~2_combout ),
-	.datac(\Comparator|comp0|AEQB~0_combout ),
-	.datad(\Comparator|ALTB~2_combout ),
-	.cin(gnd),
-	.combout(\Comparator|AEQB~0_combout ),
-	.cout());
-// synopsys translate_off
-defparam \Comparator|AEQB~0 .lut_mask = 16'hF6FF;
-defparam \Comparator|AEQB~0 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X13_Y22_N6
-fiftyfivenm_lcell_comb \HVAC_Sim|counter:cnt[0]~2 (
-// Equation(s):
-// \HVAC_Sim|counter:cnt[0]~2_combout  = (!\Control_Energy|BLOWER~2_combout  & (\Comparator|AEQB~0_combout  & ((\HVAC_Sim|counter:cnt[0]~1_combout ) # (\HVAC_Sim|counter~1_combout ))))
-
-	.dataa(\Control_Energy|BLOWER~2_combout ),
-	.datab(\HVAC_Sim|counter:cnt[0]~1_combout ),
-	.datac(\Comparator|AEQB~0_combout ),
-	.datad(\HVAC_Sim|counter~1_combout ),
-	.cin(gnd),
-	.combout(\HVAC_Sim|counter:cnt[0]~2_combout ),
-	.cout());
-// synopsys translate_off
-defparam \HVAC_Sim|counter:cnt[0]~2 .lut_mask = 16'h5040;
-defparam \HVAC_Sim|counter:cnt[0]~2 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X13_Y22_N16
-fiftyfivenm_lcell_comb \HVAC_Sim|Add0~1 (
-// Equation(s):
-// \HVAC_Sim|Add0~1_cout  = CARRY(\HVAC_Sim|counter:cnt[0]~q )
-
-	.dataa(\HVAC_Sim|counter:cnt[0]~q ),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(vcc),
-	.cin(gnd),
-	.combout(),
-	.cout(\HVAC_Sim|Add0~1_cout ));
-// synopsys translate_off
-defparam \HVAC_Sim|Add0~1 .lut_mask = 16'h00AA;
-defparam \HVAC_Sim|Add0~1 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X13_Y22_N18
-fiftyfivenm_lcell_comb \HVAC_Sim|Add0~2 (
-// Equation(s):
-// \HVAC_Sim|Add0~2_combout  = (\HVAC_Sim|counter:cnt[1]~q  & ((\HVAC_Sim|counter~1_combout  & (!\HVAC_Sim|Add0~1_cout )) # (!\HVAC_Sim|counter~1_combout  & (\HVAC_Sim|Add0~1_cout  & VCC)))) # (!\HVAC_Sim|counter:cnt[1]~q  & ((\HVAC_Sim|counter~1_combout  & 
-// ((\HVAC_Sim|Add0~1_cout ) # (GND))) # (!\HVAC_Sim|counter~1_combout  & (!\HVAC_Sim|Add0~1_cout ))))
-// \HVAC_Sim|Add0~3  = CARRY((\HVAC_Sim|counter:cnt[1]~q  & (\HVAC_Sim|counter~1_combout  & !\HVAC_Sim|Add0~1_cout )) # (!\HVAC_Sim|counter:cnt[1]~q  & ((\HVAC_Sim|counter~1_combout ) # (!\HVAC_Sim|Add0~1_cout ))))
-
-	.dataa(\HVAC_Sim|counter:cnt[1]~q ),
-	.datab(\HVAC_Sim|counter~1_combout ),
-	.datac(gnd),
-	.datad(vcc),
-	.cin(\HVAC_Sim|Add0~1_cout ),
-	.combout(\HVAC_Sim|Add0~2_combout ),
-	.cout(\HVAC_Sim|Add0~3 ));
-// synopsys translate_off
-defparam \HVAC_Sim|Add0~2 .lut_mask = 16'h694D;
-defparam \HVAC_Sim|Add0~2 .sum_lutc_input = "cin";
-// synopsys translate_on
-
-// Location: LCCOMB_X13_Y22_N12
-fiftyfivenm_lcell_comb \HVAC_Sim|counter:cnt[1]~0 (
-// Equation(s):
-// \HVAC_Sim|counter:cnt[1]~0_combout  = (\HVAC_Sim|counter:cnt[0]~2_combout  & ((\HVAC_Sim|Add0~2_combout ))) # (!\HVAC_Sim|counter:cnt[0]~2_combout  & (\HVAC_Sim|counter:cnt[1]~q ))
-
-	.dataa(\HVAC_Sim|counter:cnt[0]~2_combout ),
-	.datab(gnd),
-	.datac(\HVAC_Sim|counter:cnt[1]~q ),
-	.datad(\HVAC_Sim|Add0~2_combout ),
-	.cin(gnd),
-	.combout(\HVAC_Sim|counter:cnt[1]~0_combout ),
-	.cout());
-// synopsys translate_off
-defparam \HVAC_Sim|counter:cnt[1]~0 .lut_mask = 16'hFA50;
-defparam \HVAC_Sim|counter:cnt[1]~0 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: FF_X13_Y22_N13
-dffeas \HVAC_Sim|counter:cnt[1] (
-	.clk(\clk_in~inputclkctrl_outclk ),
-	.d(\HVAC_Sim|counter:cnt[1]~0_combout ),
-	.asdata(vcc),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\HVAC_Sim|counter:cnt[1]~q ),
-	.prn(vcc));
-// synopsys translate_off
-defparam \HVAC_Sim|counter:cnt[1] .is_wysiwyg = "true";
-defparam \HVAC_Sim|counter:cnt[1] .power_up = "low";
 // synopsys translate_on
 
 // Location: LCCOMB_X13_Y22_N20
@@ -849,32 +692,189 @@ defparam \HVAC_Sim|counter:cnt[2] .is_wysiwyg = "true";
 defparam \HVAC_Sim|counter:cnt[2] .power_up = "low";
 // synopsys translate_on
 
-// Location: LCCOMB_X13_Y22_N8
+// Location: LCCOMB_X13_Y22_N28
 fiftyfivenm_lcell_comb \Comparator|ALTB~2 (
 // Equation(s):
-// \Comparator|ALTB~2_combout  = (\Target_Temp|temp_out[2]~1_combout  & (\HVAC_Sim|counter:cnt[2]~q  & (\Target_Temp|temp_out[3]~0_combout  $ (!\HVAC_Sim|counter:cnt[3]~q )))) # (!\Target_Temp|temp_out[2]~1_combout  & (!\HVAC_Sim|counter:cnt[2]~q  & 
-// (\Target_Temp|temp_out[3]~0_combout  $ (!\HVAC_Sim|counter:cnt[3]~q ))))
+// \Comparator|ALTB~2_combout  = (\Target_Temp|temp_out[3]~0_combout  & (\HVAC_Sim|counter:cnt[3]~q  & (\Target_Temp|temp_out[2]~1_combout  $ (!\HVAC_Sim|counter:cnt[2]~q )))) # (!\Target_Temp|temp_out[3]~0_combout  & (!\HVAC_Sim|counter:cnt[3]~q  & 
+// (\Target_Temp|temp_out[2]~1_combout  $ (!\HVAC_Sim|counter:cnt[2]~q ))))
 
-	.dataa(\Target_Temp|temp_out[2]~1_combout ),
-	.datab(\Target_Temp|temp_out[3]~0_combout ),
+	.dataa(\Target_Temp|temp_out[3]~0_combout ),
+	.datab(\Target_Temp|temp_out[2]~1_combout ),
 	.datac(\HVAC_Sim|counter:cnt[3]~q ),
 	.datad(\HVAC_Sim|counter:cnt[2]~q ),
 	.cin(gnd),
 	.combout(\Comparator|ALTB~2_combout ),
 	.cout());
 // synopsys translate_off
-defparam \Comparator|ALTB~2 .lut_mask = 16'h8241;
+defparam \Comparator|ALTB~2 .lut_mask = 16'h8421;
 defparam \Comparator|ALTB~2 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X13_Y22_N14
-fiftyfivenm_lcell_comb \HVAC_Sim|counter~0 (
+// Location: LCCOMB_X14_Y22_N10
+fiftyfivenm_lcell_comb \Comparator|AEQB~0 (
 // Equation(s):
-// \HVAC_Sim|counter~0_combout  = (((!\HVAC_Sim|counter:cnt[2]~q ) # (!\HVAC_Sim|counter:cnt[0]~q )) # (!\HVAC_Sim|counter:cnt[3]~q )) # (!\HVAC_Sim|counter:cnt[1]~q )
+// \Comparator|AEQB~0_combout  = (\Comparator|comp0|AEQB~0_combout ) # ((\HVAC_Sim|counter:cnt[1]~q  $ (\Target_Temp|temp_out[1]~2_combout )) # (!\Comparator|ALTB~2_combout ))
 
 	.dataa(\HVAC_Sim|counter:cnt[1]~q ),
-	.datab(\HVAC_Sim|counter:cnt[3]~q ),
+	.datab(\Target_Temp|temp_out[1]~2_combout ),
+	.datac(\Comparator|comp0|AEQB~0_combout ),
+	.datad(\Comparator|ALTB~2_combout ),
+	.cin(gnd),
+	.combout(\Comparator|AEQB~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Comparator|AEQB~0 .lut_mask = 16'hF6FF;
+defparam \Comparator|AEQB~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X14_Y22_N26
+fiftyfivenm_lcell_comb \Target_Temp|temp_out[0]~3 (
+// Equation(s):
+// \Target_Temp|temp_out[0]~3_combout  = (\pb[3]~input_o  & ((\sw[4]~input_o ))) # (!\pb[3]~input_o  & (\sw[0]~input_o ))
+
+	.dataa(\sw[0]~input_o ),
+	.datab(gnd),
+	.datac(\pb[3]~input_o ),
+	.datad(\sw[4]~input_o ),
+	.cin(gnd),
+	.combout(\Target_Temp|temp_out[0]~3_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Target_Temp|temp_out[0]~3 .lut_mask = 16'hFA0A;
+defparam \Target_Temp|temp_out[0]~3 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X13_Y22_N12
+fiftyfivenm_lcell_comb \Comparator|AGTB~1 (
+// Equation(s):
+// \Comparator|AGTB~1_combout  = (\Target_Temp|temp_out[1]~2_combout  & (!\Target_Temp|temp_out[0]~3_combout  & (\HVAC_Sim|counter:cnt[0]~q  & \HVAC_Sim|counter:cnt[1]~q ))) # (!\Target_Temp|temp_out[1]~2_combout  & ((\HVAC_Sim|counter:cnt[1]~q ) # 
+// ((!\Target_Temp|temp_out[0]~3_combout  & \HVAC_Sim|counter:cnt[0]~q ))))
+
+	.dataa(\Target_Temp|temp_out[1]~2_combout ),
+	.datab(\Target_Temp|temp_out[0]~3_combout ),
 	.datac(\HVAC_Sim|counter:cnt[0]~q ),
+	.datad(\HVAC_Sim|counter:cnt[1]~q ),
+	.cin(gnd),
+	.combout(\Comparator|AGTB~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Comparator|AGTB~1 .lut_mask = 16'h7510;
+defparam \Comparator|AGTB~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X13_Y22_N26
+fiftyfivenm_lcell_comb \Comparator|AGTB~0 (
+// Equation(s):
+// \Comparator|AGTB~0_combout  = (\Target_Temp|temp_out[3]~0_combout  & (!\Target_Temp|temp_out[2]~1_combout  & (\HVAC_Sim|counter:cnt[3]~q  & \HVAC_Sim|counter:cnt[2]~q ))) # (!\Target_Temp|temp_out[3]~0_combout  & ((\HVAC_Sim|counter:cnt[3]~q ) # 
+// ((!\Target_Temp|temp_out[2]~1_combout  & \HVAC_Sim|counter:cnt[2]~q ))))
+
+	.dataa(\Target_Temp|temp_out[3]~0_combout ),
+	.datab(\Target_Temp|temp_out[2]~1_combout ),
+	.datac(\HVAC_Sim|counter:cnt[3]~q ),
+	.datad(\HVAC_Sim|counter:cnt[2]~q ),
+	.cin(gnd),
+	.combout(\Comparator|AGTB~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Comparator|AGTB~0 .lut_mask = 16'h7150;
+defparam \Comparator|AGTB~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X13_Y22_N10
+fiftyfivenm_lcell_comb \HVAC_Sim|counter:cnt[0]~0 (
+// Equation(s):
+// \HVAC_Sim|counter:cnt[0]~0_combout  = (\HVAC_Sim|counter:cnt[3]~q ) # ((\HVAC_Sim|counter:cnt[1]~q ) # ((\HVAC_Sim|counter:cnt[0]~q ) # (\HVAC_Sim|counter:cnt[2]~q )))
+
+	.dataa(\HVAC_Sim|counter:cnt[3]~q ),
+	.datab(\HVAC_Sim|counter:cnt[1]~q ),
+	.datac(\HVAC_Sim|counter:cnt[0]~q ),
+	.datad(\HVAC_Sim|counter:cnt[2]~q ),
+	.cin(gnd),
+	.combout(\HVAC_Sim|counter:cnt[0]~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \HVAC_Sim|counter:cnt[0]~0 .lut_mask = 16'hFFFE;
+defparam \HVAC_Sim|counter:cnt[0]~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X13_Y22_N24
+fiftyfivenm_lcell_comb \HVAC_Sim|counter:cnt[0]~1 (
+// Equation(s):
+// \HVAC_Sim|counter:cnt[0]~1_combout  = (\HVAC_Sim|counter:cnt[0]~0_combout  & ((\Comparator|AGTB~0_combout ) # ((\Comparator|AGTB~1_combout  & \Comparator|ALTB~2_combout ))))
+
+	.dataa(\Comparator|AGTB~1_combout ),
+	.datab(\Comparator|ALTB~2_combout ),
+	.datac(\Comparator|AGTB~0_combout ),
+	.datad(\HVAC_Sim|counter:cnt[0]~0_combout ),
+	.cin(gnd),
+	.combout(\HVAC_Sim|counter:cnt[0]~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \HVAC_Sim|counter:cnt[0]~1 .lut_mask = 16'hF800;
+defparam \HVAC_Sim|counter:cnt[0]~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X13_Y22_N14
+fiftyfivenm_lcell_comb \HVAC_Sim|counter:cnt[0]~2 (
+// Equation(s):
+// \HVAC_Sim|counter:cnt[0]~2_combout  = (!\Control_Energy|BLOWER~2_combout  & (\Comparator|AEQB~0_combout  & ((\HVAC_Sim|counter~1_combout ) # (\HVAC_Sim|counter:cnt[0]~1_combout ))))
+
+	.dataa(\Control_Energy|BLOWER~2_combout ),
+	.datab(\HVAC_Sim|counter~1_combout ),
+	.datac(\Comparator|AEQB~0_combout ),
+	.datad(\HVAC_Sim|counter:cnt[0]~1_combout ),
+	.cin(gnd),
+	.combout(\HVAC_Sim|counter:cnt[0]~2_combout ),
+	.cout());
+// synopsys translate_off
+defparam \HVAC_Sim|counter:cnt[0]~2 .lut_mask = 16'h5040;
+defparam \HVAC_Sim|counter:cnt[0]~2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X13_Y22_N6
+fiftyfivenm_lcell_comb \HVAC_Sim|counter:cnt[0]~3 (
+// Equation(s):
+// \HVAC_Sim|counter:cnt[0]~3_combout  = \HVAC_Sim|counter:cnt[0]~q  $ (\HVAC_Sim|counter:cnt[0]~2_combout )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(\HVAC_Sim|counter:cnt[0]~q ),
+	.datad(\HVAC_Sim|counter:cnt[0]~2_combout ),
+	.cin(gnd),
+	.combout(\HVAC_Sim|counter:cnt[0]~3_combout ),
+	.cout());
+// synopsys translate_off
+defparam \HVAC_Sim|counter:cnt[0]~3 .lut_mask = 16'h0FF0;
+defparam \HVAC_Sim|counter:cnt[0]~3 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X13_Y22_N7
+dffeas \HVAC_Sim|counter:cnt[0] (
+	.clk(\clk_in~inputclkctrl_outclk ),
+	.d(\HVAC_Sim|counter:cnt[0]~3_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\HVAC_Sim|counter:cnt[0]~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \HVAC_Sim|counter:cnt[0] .is_wysiwyg = "true";
+defparam \HVAC_Sim|counter:cnt[0] .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X13_Y22_N30
+fiftyfivenm_lcell_comb \HVAC_Sim|counter~0 (
+// Equation(s):
+// \HVAC_Sim|counter~0_combout  = (((!\HVAC_Sim|counter:cnt[2]~q ) # (!\HVAC_Sim|counter:cnt[3]~q )) # (!\HVAC_Sim|counter:cnt[1]~q )) # (!\HVAC_Sim|counter:cnt[0]~q )
+
+	.dataa(\HVAC_Sim|counter:cnt[0]~q ),
+	.datab(\HVAC_Sim|counter:cnt[1]~q ),
+	.datac(\HVAC_Sim|counter:cnt[3]~q ),
 	.datad(\HVAC_Sim|counter:cnt[2]~q ),
 	.cin(gnd),
 	.combout(\HVAC_Sim|counter~0_combout ),
@@ -887,35 +887,35 @@ defparam \HVAC_Sim|counter~0 .sum_lutc_input = "datac";
 // Location: LCCOMB_X13_Y22_N2
 fiftyfivenm_lcell_comb \Comparator|ALTB~1 (
 // Equation(s):
-// \Comparator|ALTB~1_combout  = (\HVAC_Sim|counter:cnt[1]~q  & (\Target_Temp|temp_out[0]~3_combout  & (\Target_Temp|temp_out[1]~2_combout  & !\HVAC_Sim|counter:cnt[0]~q ))) # (!\HVAC_Sim|counter:cnt[1]~q  & ((\Target_Temp|temp_out[1]~2_combout ) # 
-// ((\Target_Temp|temp_out[0]~3_combout  & !\HVAC_Sim|counter:cnt[0]~q ))))
+// \Comparator|ALTB~1_combout  = (\Target_Temp|temp_out[1]~2_combout  & (((\Target_Temp|temp_out[0]~3_combout  & !\HVAC_Sim|counter:cnt[0]~q )) # (!\HVAC_Sim|counter:cnt[1]~q ))) # (!\Target_Temp|temp_out[1]~2_combout  & (\Target_Temp|temp_out[0]~3_combout  
+// & (!\HVAC_Sim|counter:cnt[1]~q  & !\HVAC_Sim|counter:cnt[0]~q )))
 
-	.dataa(\HVAC_Sim|counter:cnt[1]~q ),
+	.dataa(\Target_Temp|temp_out[1]~2_combout ),
 	.datab(\Target_Temp|temp_out[0]~3_combout ),
-	.datac(\Target_Temp|temp_out[1]~2_combout ),
+	.datac(\HVAC_Sim|counter:cnt[1]~q ),
 	.datad(\HVAC_Sim|counter:cnt[0]~q ),
 	.cin(gnd),
 	.combout(\Comparator|ALTB~1_combout ),
 	.cout());
 // synopsys translate_off
-defparam \Comparator|ALTB~1 .lut_mask = 16'h50D4;
+defparam \Comparator|ALTB~1 .lut_mask = 16'h0A8E;
 defparam \Comparator|ALTB~1 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X13_Y22_N0
+// Location: LCCOMB_X13_Y22_N8
 fiftyfivenm_lcell_comb \HVAC_Sim|counter~1 (
 // Equation(s):
 // \HVAC_Sim|counter~1_combout  = (\HVAC_Sim|counter~0_combout  & ((\Comparator|ALTB~0_combout ) # ((\Comparator|ALTB~2_combout  & \Comparator|ALTB~1_combout ))))
 
-	.dataa(\Comparator|ALTB~2_combout ),
-	.datab(\Comparator|ALTB~0_combout ),
-	.datac(\HVAC_Sim|counter~0_combout ),
+	.dataa(\HVAC_Sim|counter~0_combout ),
+	.datab(\Comparator|ALTB~2_combout ),
+	.datac(\Comparator|ALTB~0_combout ),
 	.datad(\Comparator|ALTB~1_combout ),
 	.cin(gnd),
 	.combout(\HVAC_Sim|counter~1_combout ),
 	.cout());
 // synopsys translate_off
-defparam \HVAC_Sim|counter~1 .lut_mask = 16'hE0C0;
+defparam \HVAC_Sim|counter~1 .lut_mask = 16'hA8A0;
 defparam \HVAC_Sim|counter~1 .sum_lutc_input = "datac";
 // synopsys translate_on
 
@@ -961,15 +961,15 @@ fiftyfivenm_lcell_comb \Comparator|ALTB~0 (
 // \Comparator|ALTB~0_combout  = (\Target_Temp|temp_out[3]~0_combout  & (((\Target_Temp|temp_out[2]~1_combout  & !\HVAC_Sim|counter:cnt[2]~q )) # (!\HVAC_Sim|counter:cnt[3]~q ))) # (!\Target_Temp|temp_out[3]~0_combout  & (\Target_Temp|temp_out[2]~1_combout  
 // & (!\HVAC_Sim|counter:cnt[3]~q  & !\HVAC_Sim|counter:cnt[2]~q )))
 
-	.dataa(\Target_Temp|temp_out[2]~1_combout ),
-	.datab(\Target_Temp|temp_out[3]~0_combout ),
+	.dataa(\Target_Temp|temp_out[3]~0_combout ),
+	.datab(\Target_Temp|temp_out[2]~1_combout ),
 	.datac(\HVAC_Sim|counter:cnt[3]~q ),
 	.datad(\HVAC_Sim|counter:cnt[2]~q ),
 	.cin(gnd),
 	.combout(\Comparator|ALTB~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \Comparator|ALTB~0 .lut_mask = 16'h0C8E;
+defparam \Comparator|ALTB~0 .lut_mask = 16'h0A8E;
 defparam \Comparator|ALTB~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
@@ -979,219 +979,219 @@ fiftyfivenm_lcell_comb \Comparator|ALTB~3 (
 // \Comparator|ALTB~3_combout  = (\Comparator|ALTB~0_combout ) # ((\Comparator|ALTB~2_combout  & \Comparator|ALTB~1_combout ))
 
 	.dataa(\Comparator|ALTB~0_combout ),
-	.datab(gnd),
-	.datac(\Comparator|ALTB~2_combout ),
+	.datab(\Comparator|ALTB~2_combout ),
+	.datac(gnd),
 	.datad(\Comparator|ALTB~1_combout ),
 	.cin(gnd),
 	.combout(\Comparator|ALTB~3_combout ),
 	.cout());
 // synopsys translate_off
-defparam \Comparator|ALTB~3 .lut_mask = 16'hFAAA;
+defparam \Comparator|ALTB~3 .lut_mask = 16'hEEAA;
 defparam \Comparator|ALTB~3 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: LCCOMB_X12_Y22_N2
 fiftyfivenm_lcell_comb \Comparator|AGTB~2 (
 // Equation(s):
-// \Comparator|AGTB~2_combout  = (\Comparator|AGTB~0_combout ) # ((\Comparator|ALTB~2_combout  & \Comparator|AGTB~1_combout ))
+// \Comparator|AGTB~2_combout  = (\Comparator|AGTB~0_combout ) # ((\Comparator|AGTB~1_combout  & \Comparator|ALTB~2_combout ))
 
-	.dataa(\Comparator|AGTB~0_combout ),
-	.datab(gnd),
-	.datac(\Comparator|ALTB~2_combout ),
-	.datad(\Comparator|AGTB~1_combout ),
+	.dataa(gnd),
+	.datab(\Comparator|AGTB~0_combout ),
+	.datac(\Comparator|AGTB~1_combout ),
+	.datad(\Comparator|ALTB~2_combout ),
 	.cin(gnd),
 	.combout(\Comparator|AGTB~2_combout ),
 	.cout());
 // synopsys translate_off
-defparam \Comparator|AGTB~2 .lut_mask = 16'hFAAA;
+defparam \Comparator|AGTB~2 .lut_mask = 16'hFCCC;
 defparam \Comparator|AGTB~2 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: LCCOMB_X15_Y22_N30
 fiftyfivenm_lcell_comb \Control_Energy|BLOWER (
 // Equation(s):
-// \Control_Energy|BLOWER~combout  = (\pb[1]~input_o ) # (((\pb[2]~input_o ) # (\pb[0]~input_o )) # (!\Comparator|AEQB~0_combout ))
+// \Control_Energy|BLOWER~combout  = (\pb[0]~input_o ) # ((\pb[2]~input_o ) # ((\pb[1]~input_o ) # (!\Comparator|AEQB~0_combout )))
 
-	.dataa(\pb[1]~input_o ),
-	.datab(\Comparator|AEQB~0_combout ),
-	.datac(\pb[2]~input_o ),
-	.datad(\pb[0]~input_o ),
+	.dataa(\pb[0]~input_o ),
+	.datab(\pb[2]~input_o ),
+	.datac(\pb[1]~input_o ),
+	.datad(\Comparator|AEQB~0_combout ),
 	.cin(gnd),
 	.combout(\Control_Energy|BLOWER~combout ),
 	.cout());
 // synopsys translate_off
-defparam \Control_Energy|BLOWER .lut_mask = 16'hFFFB;
+defparam \Control_Energy|BLOWER .lut_mask = 16'hFEFF;
 defparam \Control_Energy|BLOWER .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: LCCOMB_X14_Y22_N14
-fiftyfivenm_lcell_comb \Tester1|TEST_PASS~3 (
+fiftyfivenm_lcell_comb \leds~3 (
 // Equation(s):
-// \Tester1|TEST_PASS~3_combout  = (\HVAC_Sim|counter:cnt[1]~q  & (((!\sw[0]~input_o  & \HVAC_Sim|counter:cnt[0]~q )) # (!\sw[1]~input_o ))) # (!\HVAC_Sim|counter:cnt[1]~q  & (!\sw[0]~input_o  & (\HVAC_Sim|counter:cnt[0]~q  & !\sw[1]~input_o )))
+// \leds~3_combout  = (\HVAC_Sim|counter:cnt[1]~q  & (\sw[0]~input_o  & (!\HVAC_Sim|counter:cnt[0]~q  & \sw[1]~input_o ))) # (!\HVAC_Sim|counter:cnt[1]~q  & ((\sw[1]~input_o ) # ((\sw[0]~input_o  & !\HVAC_Sim|counter:cnt[0]~q ))))
 
 	.dataa(\sw[0]~input_o ),
 	.datab(\HVAC_Sim|counter:cnt[0]~q ),
 	.datac(\HVAC_Sim|counter:cnt[1]~q ),
 	.datad(\sw[1]~input_o ),
 	.cin(gnd),
-	.combout(\Tester1|TEST_PASS~3_combout ),
+	.combout(\leds~3_combout ),
 	.cout());
 // synopsys translate_off
-defparam \Tester1|TEST_PASS~3 .lut_mask = 16'h40F4;
-defparam \Tester1|TEST_PASS~3 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X14_Y22_N12
-fiftyfivenm_lcell_comb \Tester1|TEST_PASS~4 (
-// Equation(s):
-// \Tester1|TEST_PASS~4_combout  = (\HVAC_Sim|counter:cnt[2]~q  & ((\Tester1|TEST_PASS~3_combout ) # (!\sw[2]~input_o ))) # (!\HVAC_Sim|counter:cnt[2]~q  & (\Tester1|TEST_PASS~3_combout  & !\sw[2]~input_o ))
-
-	.dataa(gnd),
-	.datab(\HVAC_Sim|counter:cnt[2]~q ),
-	.datac(\Tester1|TEST_PASS~3_combout ),
-	.datad(\sw[2]~input_o ),
-	.cin(gnd),
-	.combout(\Tester1|TEST_PASS~4_combout ),
-	.cout());
-// synopsys translate_off
-defparam \Tester1|TEST_PASS~4 .lut_mask = 16'hC0FC;
-defparam \Tester1|TEST_PASS~4 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X14_Y22_N18
-fiftyfivenm_lcell_comb \Tester1|TEST_PASS~5 (
-// Equation(s):
-// \Tester1|TEST_PASS~5_combout  = (\Comparator|ALTB~3_combout  & ((\Tester1|TEST_PASS~4_combout  & ((\HVAC_Sim|counter:cnt[3]~q ) # (!\sw[3]~input_o ))) # (!\Tester1|TEST_PASS~4_combout  & (\HVAC_Sim|counter:cnt[3]~q  & !\sw[3]~input_o ))))
-
-	.dataa(\Tester1|TEST_PASS~4_combout ),
-	.datab(\HVAC_Sim|counter:cnt[3]~q ),
-	.datac(\sw[3]~input_o ),
-	.datad(\Comparator|ALTB~3_combout ),
-	.cin(gnd),
-	.combout(\Tester1|TEST_PASS~5_combout ),
-	.cout());
-// synopsys translate_off
-defparam \Tester1|TEST_PASS~5 .lut_mask = 16'h8E00;
-defparam \Tester1|TEST_PASS~5 .sum_lutc_input = "datac";
-// synopsys translate_on
-
-// Location: LCCOMB_X14_Y22_N2
-fiftyfivenm_lcell_comb \Tester1|TEST_PASS~7 (
-// Equation(s):
-// \Tester1|TEST_PASS~7_combout  = (\sw[0]~input_o  & (\HVAC_Sim|counter:cnt[0]~q  & (\sw[3]~input_o  $ (!\HVAC_Sim|counter:cnt[3]~q )))) # (!\sw[0]~input_o  & (!\HVAC_Sim|counter:cnt[0]~q  & (\sw[3]~input_o  $ (!\HVAC_Sim|counter:cnt[3]~q ))))
-
-	.dataa(\sw[0]~input_o ),
-	.datab(\HVAC_Sim|counter:cnt[0]~q ),
-	.datac(\sw[3]~input_o ),
-	.datad(\HVAC_Sim|counter:cnt[3]~q ),
-	.cin(gnd),
-	.combout(\Tester1|TEST_PASS~7_combout ),
-	.cout());
-// synopsys translate_off
-defparam \Tester1|TEST_PASS~7 .lut_mask = 16'h9009;
-defparam \Tester1|TEST_PASS~7 .sum_lutc_input = "datac";
+defparam \leds~3 .lut_mask = 16'h2F02;
+defparam \leds~3 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: LCCOMB_X14_Y22_N16
-fiftyfivenm_lcell_comb \Tester1|TEST_PASS~6 (
+fiftyfivenm_lcell_comb \leds~4 (
 // Equation(s):
-// \Tester1|TEST_PASS~6_combout  = (\HVAC_Sim|counter:cnt[1]~q  & (\sw[1]~input_o  & (\HVAC_Sim|counter:cnt[2]~q  $ (!\sw[2]~input_o )))) # (!\HVAC_Sim|counter:cnt[1]~q  & (!\sw[1]~input_o  & (\HVAC_Sim|counter:cnt[2]~q  $ (!\sw[2]~input_o ))))
+// \leds~4_combout  = (\HVAC_Sim|counter:cnt[2]~q  & (\leds~3_combout  & \sw[2]~input_o )) # (!\HVAC_Sim|counter:cnt[2]~q  & ((\leds~3_combout ) # (\sw[2]~input_o )))
 
-	.dataa(\HVAC_Sim|counter:cnt[1]~q ),
-	.datab(\HVAC_Sim|counter:cnt[2]~q ),
-	.datac(\sw[1]~input_o ),
+	.dataa(\HVAC_Sim|counter:cnt[2]~q ),
+	.datab(gnd),
+	.datac(\leds~3_combout ),
 	.datad(\sw[2]~input_o ),
 	.cin(gnd),
-	.combout(\Tester1|TEST_PASS~6_combout ),
+	.combout(\leds~4_combout ),
 	.cout());
 // synopsys translate_off
-defparam \Tester1|TEST_PASS~6 .lut_mask = 16'h8421;
-defparam \Tester1|TEST_PASS~6 .sum_lutc_input = "datac";
+defparam \leds~4 .lut_mask = 16'hF550;
+defparam \leds~4 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X14_Y22_N24
-fiftyfivenm_lcell_comb \Tester1|TEST_PASS~8 (
+// Location: LCCOMB_X14_Y22_N18
+fiftyfivenm_lcell_comb \leds~5 (
 // Equation(s):
-// \Tester1|TEST_PASS~8_combout  = (!\Comparator|AEQB~0_combout  & (\Tester1|TEST_PASS~7_combout  & \Tester1|TEST_PASS~6_combout ))
+// \leds~5_combout  = (\Comparator|ALTB~3_combout  & ((\HVAC_Sim|counter:cnt[3]~q  & (\sw[3]~input_o  & \leds~4_combout )) # (!\HVAC_Sim|counter:cnt[3]~q  & ((\sw[3]~input_o ) # (\leds~4_combout )))))
 
-	.dataa(\Comparator|AEQB~0_combout ),
-	.datab(\Tester1|TEST_PASS~7_combout ),
-	.datac(gnd),
-	.datad(\Tester1|TEST_PASS~6_combout ),
+	.dataa(\Comparator|ALTB~3_combout ),
+	.datab(\HVAC_Sim|counter:cnt[3]~q ),
+	.datac(\sw[3]~input_o ),
+	.datad(\leds~4_combout ),
 	.cin(gnd),
-	.combout(\Tester1|TEST_PASS~8_combout ),
+	.combout(\leds~5_combout ),
 	.cout());
 // synopsys translate_off
-defparam \Tester1|TEST_PASS~8 .lut_mask = 16'h4400;
-defparam \Tester1|TEST_PASS~8 .sum_lutc_input = "datac";
+defparam \leds~5 .lut_mask = 16'hA220;
+defparam \leds~5 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X14_Y22_N4
-fiftyfivenm_lcell_comb \Tester1|TEST_PASS~0 (
+// Location: LCCOMB_X14_Y22_N28
+fiftyfivenm_lcell_comb \leds~6 (
 // Equation(s):
-// \Tester1|TEST_PASS~0_combout  = (\HVAC_Sim|counter:cnt[1]~q  & (\sw[0]~input_o  & (!\HVAC_Sim|counter:cnt[0]~q  & \sw[1]~input_o ))) # (!\HVAC_Sim|counter:cnt[1]~q  & ((\sw[1]~input_o ) # ((\sw[0]~input_o  & !\HVAC_Sim|counter:cnt[0]~q ))))
+// \leds~6_combout  = (\sw[2]~input_o  & (\HVAC_Sim|counter:cnt[2]~q  & (\sw[3]~input_o  $ (!\HVAC_Sim|counter:cnt[3]~q )))) # (!\sw[2]~input_o  & (!\HVAC_Sim|counter:cnt[2]~q  & (\sw[3]~input_o  $ (!\HVAC_Sim|counter:cnt[3]~q ))))
+
+	.dataa(\sw[2]~input_o ),
+	.datab(\sw[3]~input_o ),
+	.datac(\HVAC_Sim|counter:cnt[2]~q ),
+	.datad(\HVAC_Sim|counter:cnt[3]~q ),
+	.cin(gnd),
+	.combout(\leds~6_combout ),
+	.cout());
+// synopsys translate_off
+defparam \leds~6 .lut_mask = 16'h8421;
+defparam \leds~6 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X14_Y22_N2
+fiftyfivenm_lcell_comb \leds~7 (
+// Equation(s):
+// \leds~7_combout  = (\sw[0]~input_o  & (\HVAC_Sim|counter:cnt[0]~q  & (\HVAC_Sim|counter:cnt[1]~q  $ (!\sw[1]~input_o )))) # (!\sw[0]~input_o  & (!\HVAC_Sim|counter:cnt[0]~q  & (\HVAC_Sim|counter:cnt[1]~q  $ (!\sw[1]~input_o ))))
 
 	.dataa(\sw[0]~input_o ),
 	.datab(\HVAC_Sim|counter:cnt[0]~q ),
 	.datac(\HVAC_Sim|counter:cnt[1]~q ),
 	.datad(\sw[1]~input_o ),
 	.cin(gnd),
-	.combout(\Tester1|TEST_PASS~0_combout ),
+	.combout(\leds~7_combout ),
 	.cout());
 // synopsys translate_off
-defparam \Tester1|TEST_PASS~0 .lut_mask = 16'h2F02;
-defparam \Tester1|TEST_PASS~0 .sum_lutc_input = "datac";
+defparam \leds~7 .lut_mask = 16'h9009;
+defparam \leds~7 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X14_Y22_N22
-fiftyfivenm_lcell_comb \Tester1|TEST_PASS~1 (
+// Location: LCCOMB_X14_Y22_N4
+fiftyfivenm_lcell_comb \leds~8 (
 // Equation(s):
-// \Tester1|TEST_PASS~1_combout  = (\HVAC_Sim|counter:cnt[2]~q  & (\Tester1|TEST_PASS~0_combout  & \sw[2]~input_o )) # (!\HVAC_Sim|counter:cnt[2]~q  & ((\Tester1|TEST_PASS~0_combout ) # (\sw[2]~input_o )))
+// \leds~8_combout  = ((!\Comparator|AEQB~0_combout  & (\leds~6_combout  & \leds~7_combout ))) # (!\pb[2]~input_o )
 
-	.dataa(gnd),
-	.datab(\HVAC_Sim|counter:cnt[2]~q ),
-	.datac(\Tester1|TEST_PASS~0_combout ),
+	.dataa(\Comparator|AEQB~0_combout ),
+	.datab(\leds~6_combout ),
+	.datac(\pb[2]~input_o ),
+	.datad(\leds~7_combout ),
+	.cin(gnd),
+	.combout(\leds~8_combout ),
+	.cout());
+// synopsys translate_off
+defparam \leds~8 .lut_mask = 16'h4F0F;
+defparam \leds~8 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X14_Y22_N12
+fiftyfivenm_lcell_comb \leds~0 (
+// Equation(s):
+// \leds~0_combout  = (\HVAC_Sim|counter:cnt[1]~q  & (((!\sw[0]~input_o  & \HVAC_Sim|counter:cnt[0]~q )) # (!\sw[1]~input_o ))) # (!\HVAC_Sim|counter:cnt[1]~q  & (!\sw[0]~input_o  & (\HVAC_Sim|counter:cnt[0]~q  & !\sw[1]~input_o )))
+
+	.dataa(\sw[0]~input_o ),
+	.datab(\HVAC_Sim|counter:cnt[0]~q ),
+	.datac(\HVAC_Sim|counter:cnt[1]~q ),
+	.datad(\sw[1]~input_o ),
+	.cin(gnd),
+	.combout(\leds~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \leds~0 .lut_mask = 16'h40F4;
+defparam \leds~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X14_Y22_N30
+fiftyfivenm_lcell_comb \leds~1 (
+// Equation(s):
+// \leds~1_combout  = (\leds~0_combout  & ((\HVAC_Sim|counter:cnt[2]~q ) # (!\sw[2]~input_o ))) # (!\leds~0_combout  & (\HVAC_Sim|counter:cnt[2]~q  & !\sw[2]~input_o ))
+
+	.dataa(\leds~0_combout ),
+	.datab(gnd),
+	.datac(\HVAC_Sim|counter:cnt[2]~q ),
 	.datad(\sw[2]~input_o ),
 	.cin(gnd),
-	.combout(\Tester1|TEST_PASS~1_combout ),
+	.combout(\leds~1_combout ),
 	.cout());
 // synopsys translate_off
-defparam \Tester1|TEST_PASS~1 .lut_mask = 16'hF330;
-defparam \Tester1|TEST_PASS~1 .sum_lutc_input = "datac";
+defparam \leds~1 .lut_mask = 16'hA0FA;
+defparam \leds~1 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X14_Y22_N20
-fiftyfivenm_lcell_comb \Tester1|TEST_PASS~2 (
+// Location: LCCOMB_X14_Y22_N24
+fiftyfivenm_lcell_comb \leds~2 (
 // Equation(s):
-// \Tester1|TEST_PASS~2_combout  = (\Comparator|AGTB~2_combout  & ((\Tester1|TEST_PASS~1_combout  & ((\sw[3]~input_o ) # (!\HVAC_Sim|counter:cnt[3]~q ))) # (!\Tester1|TEST_PASS~1_combout  & (\sw[3]~input_o  & !\HVAC_Sim|counter:cnt[3]~q ))))
+// \leds~2_combout  = (\Comparator|AGTB~2_combout  & ((\leds~1_combout  & ((\HVAC_Sim|counter:cnt[3]~q ) # (!\sw[3]~input_o ))) # (!\leds~1_combout  & (!\sw[3]~input_o  & \HVAC_Sim|counter:cnt[3]~q ))))
 
-	.dataa(\Tester1|TEST_PASS~1_combout ),
+	.dataa(\leds~1_combout ),
 	.datab(\Comparator|AGTB~2_combout ),
 	.datac(\sw[3]~input_o ),
 	.datad(\HVAC_Sim|counter:cnt[3]~q ),
 	.cin(gnd),
-	.combout(\Tester1|TEST_PASS~2_combout ),
+	.combout(\leds~2_combout ),
 	.cout());
 // synopsys translate_off
-defparam \Tester1|TEST_PASS~2 .lut_mask = 16'h80C8;
-defparam \Tester1|TEST_PASS~2 .sum_lutc_input = "datac";
+defparam \leds~2 .lut_mask = 16'h8C08;
+defparam \leds~2 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: LCCOMB_X14_Y22_N6
-fiftyfivenm_lcell_comb \Tester1|TEST_PASS~9 (
+fiftyfivenm_lcell_comb \leds~9 (
 // Equation(s):
-// \Tester1|TEST_PASS~9_combout  = (\pb[2]~input_o  & ((\Tester1|TEST_PASS~5_combout ) # ((\Tester1|TEST_PASS~8_combout ) # (\Tester1|TEST_PASS~2_combout ))))
+// \leds~9_combout  = (\leds~5_combout ) # ((\leds~8_combout ) # (\leds~2_combout ))
 
-	.dataa(\Tester1|TEST_PASS~5_combout ),
-	.datab(\Tester1|TEST_PASS~8_combout ),
-	.datac(\Tester1|TEST_PASS~2_combout ),
-	.datad(\pb[2]~input_o ),
+	.dataa(gnd),
+	.datab(\leds~5_combout ),
+	.datac(\leds~8_combout ),
+	.datad(\leds~2_combout ),
 	.cin(gnd),
-	.combout(\Tester1|TEST_PASS~9_combout ),
+	.combout(\leds~9_combout ),
 	.cout());
 // synopsys translate_off
-defparam \Tester1|TEST_PASS~9 .lut_mask = 16'hFE00;
-defparam \Tester1|TEST_PASS~9 .sum_lutc_input = "datac";
+defparam \leds~9 .lut_mask = 16'hFFFC;
+defparam \leds~9 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: UNVM_X0_Y11_N40

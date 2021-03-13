@@ -1,5 +1,5 @@
 Flow report for LogicalStep_Lab3_top
-Fri Mar 12 16:46:39 2021
+Fri Mar 12 19:43:23 2021
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Mar 12 16:46:39 2021       ;
+; Flow Status                        ; Successful - Fri Mar 12 19:43:23 2021       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; LogicalStep_Lab3_top                        ;
 ; Top-level Entity Name              ; LogicalStep_Lab3_top                        ;
@@ -99,7 +99,103 @@ https://fpgasoftware.intel.com/eula.
 ; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
-; Total                ; 00:00:20     ; --                      ; --                  ; 00:00:34                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4628 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4628 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4628 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4640 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4637 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4628 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4637 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4628 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4628 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4628 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4628 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4640 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4628 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4640 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4640 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4628 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4640 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4640 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4640 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4628 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4640 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4640 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4628 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4640 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4628 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4640 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4628 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4628 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4628 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4628 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4628 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4628 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4628 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4628 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; Total                ; 00:01:07     ; --                      ; --                  ; 00:01:34                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -112,6 +208,102 @@ https://fpgasoftware.intel.com/eula.
 ; Fitter               ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Assembler            ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-6AS9G70  ; Windows 10 ; 10.0       ; x86_64         ;
@@ -130,6 +322,102 @@ quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_f
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
 quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformB.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformB.vwf.vht
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformB.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformB.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformB.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformB.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformB.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformB.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformB.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformB.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformB.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformB.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformB.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformB.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformB.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformB.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformB.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformB.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformB.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformB.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformB.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformB.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/Waveform5.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/Waveform5.vwf.vht
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/Waveform5.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/Waveform5.vwf.vht
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformBSim3VacOFF.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformBSim3VacOFF.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformBSim3VacOFF.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformBSim3VacOFF.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformBSim3VacOFF.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformBSim3VacOFF.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformBSim3VacOFF.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformBSim3VacOFF.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformBSim3VacOFF.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformBSim3VacOFF.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformBSim3VacOFF.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformBSim3VacOFF.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformBSim3VacOFF.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformBSim3VacOFF.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformBSim3VacOFF.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformBSim3VacOFF.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformBSim3VacOFF.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformBSim3VacOFF.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformBSim3VacOFF.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformBSim3VacOFF.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/Waveform5.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/Waveform5.vwf.vht
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformBSim2.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformBSim2.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/Waveform5.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/Waveform5.vwf.vht
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveFormSim1.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveFormSim1.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveFormSim1.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveFormSim1.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveFormSim1.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveFormSim1.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveFormSim1.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveFormSim1.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveFormSim1.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveFormSim1.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveFormSim1.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveFormSim1.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformBSim3VacOFF.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformBSim3VacOFF.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformB.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformB.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveFormSim1.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveFormSim1.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveFormSim1.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveFormSim1.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveFormSim1.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveFormSim1.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveFormSim1.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveFormSim1.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformBSim2.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformBSim2.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformB.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformB.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformB.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformB.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformB.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformB.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformBSim3VacOFF.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformBSim3VacOFF.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformBSim3VacOFF.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformBSim3VacOFF.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformBSim3VacOFF.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformBSim3VacOFF.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformBSim3VacOFF.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformBSim3VacOFF.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformBSim3VacOFF.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformBSim3VacOFF.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformBSim3VacOFF.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformBSim3VacOFF.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformBSim3VacOFF.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformBSim3VacOFF.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformBSim3VacOFF.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformBSim3VacOFF.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off LogicalStep_Lab3 -c LogicalStep_Lab3_top --vector_source=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/WaveformBSim3VacOFF.vwf --testbench_file=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/WaveformBSim3VacOFF.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/anish/OneDrive/Documents/GitHub/ECE124_Lab3/Lab3/simulation/qsim/ LogicalStep_Lab3 -c LogicalStep_Lab3_top
 
 
 
